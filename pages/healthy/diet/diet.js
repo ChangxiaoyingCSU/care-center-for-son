@@ -1,29 +1,13 @@
-// pages/news/news.js
+// pages/healthy/diet/diet.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgas1:["../../assets/publish/healthy.png"],
-    imgas2:["../../assets/publish/diet.png"],
-    imgas3:["../../assets/publish/location.gif"]
+
   },
-	healthy(){
-		wx.navigateTo({
-			url: 'sell/sell',
-		})
-	},
-	diet(){
-		wx.navigateTo({
-			url: 'buy/buy',
-		})
-	},
-	location(){
-		wx.navigateTo({
-			url: '/pages/healthy/map/map',
-		})
-	},
+
   /**
    * 生命周期函数--监听页面加载
    */

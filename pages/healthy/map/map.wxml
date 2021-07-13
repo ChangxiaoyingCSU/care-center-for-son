@@ -1,0 +1,30 @@
+
+<!--  页面其它部分-->
+<view class='item_view'>
+  <view class='item-bk'>
+    <image class="iconfont icon-yonghu1"></image>
+    <text class="bk-text">重庆市</text>
+    <image class="iconfont icon-arrow-down"></image>
+  </view>
+  <view class='item-sm'>
+    <image class="iconfont icon-xinxi"></image>
+    <image class="iconfont icon-saoma"></image>
+  </view>
+</view>
+
+  <!-- 这里是地图 -->
+  
+  <map style="width: 100%;height: 1070rpx" markers="{{markers}}"
+  latitude="{{markers[0].latitude}}" longitude="{{markers[0].longitude}}"
+  scale="13">
+  </map>
+  
+  <view class="content-qb">
+  <view class="content-ls">
+    <view class="content-ss">
+      <image class="iconfont icon-yuan"></image>
+      <text class="wz">花溪南泉街道敬老院</text>
+    </view>
+  <view class="ruzhu" bindtap="locantion">点击入住</view>
+  </view>
+  </view>

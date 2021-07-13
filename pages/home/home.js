@@ -232,7 +232,7 @@ Page({
     var num = e.currentTarget.dataset.index;
     if(num == 0){
       wx.navigateTo({
-        url: '/pages/home/homeLeiBo/homeLeiBo?id=' + num
+        url: '/pages/healthy/map/map'
       })
     } else if (num == 1){
       wx.navigateTo({

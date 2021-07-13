@@ -1,29 +1,18 @@
-// pages/news/news.js
+// pages/my/AboutUs/AboutUs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgas1:["../../assets/publish/healthy.png"],
-    imgas2:["../../assets/publish/diet.png"],
-    imgas3:["../../assets/publish/location.gif"]
+			data:{
+				img:"../../../assets/home/homeIcon/04.png",
+				title:"××找房",
+				content:"子弹找房 , 全国物业房源 , 覆盖全国365个城市 , 业务涵盖新房 、二手房 、整租 、合租 、公寓等业务 , 每日更新上万条物业房源为您提供专业安全找房服务",
+				phone:"400-890-8890转1"
+			}
   },
-	healthy(){
-		wx.navigateTo({
-			url: 'sell/sell',
-		})
-	},
-	diet(){
-		wx.navigateTo({
-			url: 'buy/buy',
-		})
-	},
-	location(){
-		wx.navigateTo({
-			url: '/pages/healthy/map/map',
-		})
-	},
+
   /**
    * 生命周期函数--监听页面加载
    */
