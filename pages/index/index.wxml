@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" style="width: 750rpx; height: 1184rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
@@ -16,8 +16,25 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    <view><button id="button1" bindtap="goto" style="position: relative; left: 5rpx; top: 300rpx">登录</button></view>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 </view>
