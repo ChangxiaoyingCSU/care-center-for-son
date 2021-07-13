@@ -5,8 +5,8 @@ Page({
    */
   data: {
 		img:[
-			"/assets/home/butie.png",
-			"/assets/home/Commission.png",
+			"/assets/banner.png",
+			"/assets/main.png",
 			],
 			info:[
 				"我是数据一",
@@ -29,36 +29,20 @@ Page({
       /**房东直卖  优选房源 图标接口数据 */
       maifangImg:[
         {
-          img:'/assets/home/homeIcon/04.png',
-          title:'房东直卖'
+          img:'/assets/location.png',
+          title:'实时定位'
         },
         {
-          img:'/assets/home/homeIcon/03.png',
-          title:'优选房源'
+          img:'/assets/healthy.png',
+          title:'健康情况'
         },
         {
-          img:'/assets/home/homeIcon/02.png',
-          title:'服务网点'
+          img:'/assets/food.png',
+          title:'膳食情况'
         },
         {
-          img:'/assets/home/homeIcon/01.png',
-          title:'关于我们'
-        },
-        {
-          img:'/assets/home/homeIcon/02.png',
-          title:'新房'
-        },
-        {
-          img:'/assets/home/homeIcon/03.png',
-          title:'租房'
-        },
-        {
-          img:'/assets/home/homeIcon/02.png',
-          title:'xx'
-        },
-        {
-          img:'/assets/home/homeIcon/01.png',
-          title:'xx'
+          img:'/assets/money.png',
+          title:'自主缴费'
         }
       ],
       /**测试数据  已废 */
@@ -77,7 +61,7 @@ Page({
         {
           id:'1',
           zd: '0',
-          img:'../../assets/home/homeListItem/01.png',
+          img:'../../assets/doctor/1.jpg',
           title:'海港广场，精装标准套三出售，带家具家电靠地铁',
           stmel:'芙蓉区',
           stmels:'长房东立',
@@ -91,7 +75,7 @@ Page({
         {
           id:'2',
           zd: '0',
-          img:'../../assets/home/homeListItem/02.png',
+          img:'../../assets/doctor/2.jpg',
           title:'中心广场中心.领包入住，精装修房东直租',
           stmel:'开福区',
           stmels:'宽属大厦',
@@ -105,7 +89,7 @@ Page({
         {
           id:'3',
           zd: '0',
-          img:'../../assets/home/homeListItem/03.png',
+          img:'../../assets/doctor/3.jpg',
           title:'南儿街顶楼地段好地铁房双林小学 带花园',
           stmel:'梅溪湖',
           stmels:'鼎奥国际',
@@ -119,7 +103,7 @@ Page({
         {
           id:'4',
           zd:'0',
-          img:'../../assets/home/homeListItem/04.png',
+          img:'../../assets/doctor/4.jpg',
           title:'溪岛精装套三，靠地铁',
           stmel:'长沙县',
           stmels:'小遂溪岛',
@@ -133,7 +117,7 @@ Page({
         {
           id: '5',
           zd:'1',
-          img: '../../assets/home/homeListItem/04.png',
+          img: '../../assets/doctor/1.jpg',
           title: 'sssssssss三，靠',
           stmel: '长沙县',
           stmels: '小遂溪岛',
@@ -209,7 +193,7 @@ Page({
         },
         {
           img:'../../assets/svg/Phone.svg',
-          title:"客户电话",
+          title:"客服电话",
           txt:"400-890-88900"
         }
       ],
