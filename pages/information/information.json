@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "h-swiper":"/components/h-swiper1/h-swiper1"
+    "h-swiper":"/components/h-swiper1/h-swiper1",
+    "personalHousing":"/components/personalHousing/personalHousing"
   }
 }
