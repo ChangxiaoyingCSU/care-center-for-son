@@ -189,7 +189,7 @@ Page({
         {
           img:'../../assets/svg/Khu.svg',
           title:"签约服务网点",
-          txt:"一触即达,分分钟解决你的"
+          txt:"一触即达,分分钟解决问题"
         },
         {
           img:'../../assets/svg/Phone.svg',
@@ -200,14 +200,14 @@ Page({
       /**homeFeuer */
       homeFeuerFd:[
         {
-          title01:"房东直卖",
+          title01:"高级护理",
           title02:"查看更多",
           img:"../../assets/svg/fhui.svg"
         }
       ],
     homeFeuerYx: [
       {
-        title01: "优选房源",
+        title01: "优选护工",
         title02: "查看更多",
         img: "../../../assets/svg/fhui.svg"
       }

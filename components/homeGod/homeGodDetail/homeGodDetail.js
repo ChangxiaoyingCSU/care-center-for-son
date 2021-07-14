@@ -110,7 +110,7 @@ Page({
 			},
 			{
 				name: "联系电话",
-				price: "15573385311"
+				price: "400-890-88900"
 			},
 		],
 		excellentHouse: [{

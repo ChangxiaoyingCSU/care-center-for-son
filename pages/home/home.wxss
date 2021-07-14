@@ -139,7 +139,6 @@ left: 8px;
   letter-spacing: 2px;
   font-size: 44rpx;
   color: #0c0c0c;
-  font-family:'Times New Roman', Times, serif;
   line-height: 70rpx;
   font-weight: 700;
 }
