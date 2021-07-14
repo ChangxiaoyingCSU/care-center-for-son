@@ -43,8 +43,8 @@
 				<text class="c">工资</text>
 			</view>
 			<view class="inputItem be">
-				<text>负责耐心</text>
-				<text class="c">服务</text>
+				<text>从业7年</text>
+				<text class="c">工作经历</text>
 			</view>
 			<view class="inputItem be">
 				<text>98.6%</text>
@@ -102,7 +102,7 @@
 		<excellentHouse excellentHouse="{{excellentHouse}}"></excellentHouse>
 
 		<view  bindtap="personal" class="side1 f">
-			<text class="title">房源直卖</text>
+			<text class="title">企业认证</text>
 			<view class="sideL">
 				<text>查看全部</text>
 				<text class="icon-you"></text>
@@ -111,7 +111,7 @@
 		<personalHousing personalHousing="{{personalHousing}}"></personalHousing>
 
 		<view  bindtap="newHouse" class="side1 f">
-			<text class="title">周边新房</text>
+			<text class="title">配套服务</text>
 			<view class="sideL">
 				<text>查看全部</text>
 				<text class="icon-you"></text>
