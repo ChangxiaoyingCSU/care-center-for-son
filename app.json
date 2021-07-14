@@ -11,7 +11,8 @@
     "pages/my/attention/attention",
     "pages/my/commonQuestion/commonQuestion",
     "components/homeGod/homeGod",
-    "pages/information/information"
+    "pages/information/information",
+    "components/h-swiper1/h-swiper1"
   ],
   "permission": {
     "scope.userLocation": {

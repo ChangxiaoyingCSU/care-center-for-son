@@ -1,15 +1,21 @@
-.line2-icon {
-  width: 60px;
-  height: 60px
+.swiper-input{
+  position: absolute;
+  top: calc(25vh - 0rpx);
+  background: #fffdfd;
+  border-radius: 40rpx;
+  box-shadow: 0 0 8px #adaba9;
+  left: 43rpx;
+}
+.container {
+  height: 100%;
+  text-align:center; 
+  background:#f6f8f8; 
+  padding:20rpx;
+  font-size:16px;
+} 
+.padb{
+  padding-bottom: 15rpx;
 }
 
-._a {
-  text-decoration: none
-}
 
-.notice {
- 
 
-  -webkit-border-radius: 10rpx;
-  border-radius: 10rpx
-}
