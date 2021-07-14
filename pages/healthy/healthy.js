@@ -10,7 +10,9 @@ Page({
     imgas3:["../../assets/publish/location.gif"]
   },
 	healthy(){
-		
+		wx.navigateTo({
+			url: 'sell/sell',
+		})
 	},
 	diet(){
 		wx.navigateTo({
