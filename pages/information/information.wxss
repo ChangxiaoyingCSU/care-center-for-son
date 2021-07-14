@@ -1,0 +1,15 @@
+.line2-icon {
+  width: 60px;
+  height: 60px
+}
+
+._a {
+  text-decoration: none
+}
+
+.notice {
+ 
+
+  -webkit-border-radius: 10rpx;
+  border-radius: 10rpx
+}

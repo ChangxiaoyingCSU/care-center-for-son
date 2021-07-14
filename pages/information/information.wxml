@@ -1,0 +1,75 @@
+<view>
+  <scroll-view>
+    <swiper class="screen-swiper square-dot" style="{{'animation:'+('show 0.2s 1')+';'}}" indicator-dots="{{true}}"
+      circular="{{true}}" autoplay="{{true}}" interval="5000" duration="500">
+      <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <swiper-item>
+          <block wx:if="{{item.type=='image'}}">
+            <image src="{{item.url}}" mode="aspectFill"></image>
+          </block>
+          <block wx:if="{{item.type=='video'}}"><video src="{{item.url}}" autoplay="{{true}}" loop="{{true}}"
+              show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" muted="{{true}}"></video></block>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="bg-white" style="{{'animation:'+('show 0.4s 1')+';'}}">
+      <view class="grid margin-bottom col-2 ">
+        <block wx:for="{{middleApps}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+          <navigator class="nav-li" style="{{'animation:'+('show '+(index+1)*0.1+'s 1')+';'}}"
+            url="{{'/pages/jbbk/jbbk'}}" navigateTo="{{true}}" hover-class="none">
+            <view class="flex align-center">
+              <image class="line2-icon" src="{{'/static/ylui/'+item.icon}}" mode="aspectFill"></image>
+              <view class="text-df">{{item.title+''}}<view class="_br"></view><label
+                  class="text-light _span">{{item.text}}</label></view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+    
+    <view class="cu-card article  notice " style="{{'animation:'+('show 0.6s 1')+';'}}">
+      <view class="text-cut text-bold cu-item shadow">
+          <view class="text-cut">通知：关于进一步加强疫情防控工作的通知 </view> 
+      </view>
+    </view>
+
+    <view class="cu-card article">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut">健康中国•传承中医药文化”首届粤港澳大湾区网络视听作品征评展播活动还将在珠海市举办第五场中医药文化主题大讲堂</view>
+        </view>
+        <view class="content">
+          <image src="../../static/BasicsBg.png" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">
+              “健康中国•传承中医药文化”首届粤港澳大湾区网络视听作品征评展播活动，通过征集、传播一批中医药文化精品、开展“健康社区行”、“健康中国·传承中医药文化”视听大讲堂等活动，线上与线下宣推相结合，推动中医药文化深植民心，赋能中医药文化传承发展，助力提升大湾区健康水平。
+            </view>
+            <view>
+              <view class="cu-tag bg-red light sm round">健康生活</view>
+              <view class="cu-tag bg-green light sm round">中医药</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-card article">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut">健康生活的三个基本方法</view>
+        </view>
+        <view class="content">
+          <image src="../../static/componentBg.png" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">
+              你想要拥有一个能支持你进入老年的身体吗?你想拥有清晰的头脑，优质的人际关系，良好的内部功能，甚至是整体的良好感觉吗?好吧，健康的生活方式能让你达到目的，或者至少能改善你的状况。有三件事是你应该做的:</view>
+            <view>
+              <view class="cu-tag bg-red light sm round">健康生活</view>
+              <view class="cu-tag bg-green light sm round">养生</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-tabbar-height"></view>
+  </scroll-view>
+</view>

@@ -179,7 +179,7 @@ Page({
         number: '10000',
         specifications: '从业6年',
         homesuper: '学历优秀',
-        squaremeter: '97.',
+        squaremeter: '97.3',
         avatar: '../../assets/home/Headportrait/s04.png',
         type: '企业'
       }

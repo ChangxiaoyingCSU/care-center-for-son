@@ -10,7 +10,8 @@
     "pages/my/agreement/agreement",
     "pages/my/attention/attention",
     "pages/my/commonQuestion/commonQuestion",
-    "components/homeGod/homeGod"
+    "components/homeGod/homeGod",
+    "pages/information/information"
   ],
   "permission": {
     "scope.userLocation": {
@@ -28,6 +29,13 @@
         "text": "首页",
         "iconPath": "/assets/tabbar/home_new.png",
         "selectedIconPath": "/assets/tabbar/home_new_.png",
+        "selectedColor": "#3fbaa6"
+      },
+      {
+        "pagePath": "pages/information/information",
+        "text": "资讯",
+        "iconPath": "/assets/tabbar/about.png",
+        "selectedIconPath": "/assets/tabbar/about_cur.png",
         "selectedColor": "#3fbaa6"
       },
       {
