@@ -17,17 +17,18 @@
 
 			<view class="s3">
 				<text style="color:red;font-size:30rpx;font-weight:800;">{{item.number}}</text>
-				<text style="color:red;">万</text>
+				<text style="color:red;">K</text>
 				<div class="vLine"></div>
 				<span>{{item.specifications}}</span>
 				<div class="vLine"></div>
-				<span style="color:#384047">{{item.squaremeter}}㎡</span>
+				<span>好评率：</span>
+				<span style="color:#384047">{{item.squaremeter}}%</span>
 			</view>
 
 			<view class="s4">
-				<view class="x1"><text>免税</text></view>
-				<view class="x1"><text>实勘</text></view>
-				<view class="x1"><text>随时看房</text></view>
+				<view class="x1"><text>体检上岗</text></view>
+				<view class="x1"><text>全程保险</text></view>
+				<view class="x1"><text>企业认证</text></view>
 			</view>
 		</view>
 	</view>

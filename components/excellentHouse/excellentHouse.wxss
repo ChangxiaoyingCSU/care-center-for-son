@@ -6,6 +6,13 @@
     padding-left: 0px;
     margin: 10rpx 0;
 }
+.vLine {
+    margin: 0 8rpx;
+    border-left: solid 1px #ccc;
+    height: 20rpx;
+    vertical-align: middle;
+    display: inline-block
+}
 .data02-img{
     position: relative;
     width: 216rpx;
