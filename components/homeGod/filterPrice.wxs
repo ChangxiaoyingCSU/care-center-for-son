@@ -7,7 +7,7 @@ var fnToFixed = function(num){
     num = num.toFixed(2);//保留两位数,四舍五入保留两位小数
     return num;
 };
-//传入金额换算成单位万元
+//传入金额换算成单位K
 var fnMoney = function(money){
     money = parseFloat(money)/1000;
     //三元运算符判断如果为整数输入money否者调用toFixed方法

@@ -4,26 +4,26 @@
 		<view class="t2">
 			<view>
 				<text class="icon-fangwu"></text>
-				<text class="main">优选好房</text>
+				<text class="main">优选护工</text>
 			</view>
 			<view class="t">
 				<text class="icon-dui"></text>
-				<text>实地查验</text>
+				<text>高效服务</text>
 			</view>
 			<view class="t">
 				<text class="icon-dui"></text>
-				<text>高性价比</text>
+				<text>企业保障</text>
 			</view>
 			<view class="t">
 				<text class="icon-dui"></text>
-				<text>交易保障</text>
+				<text>制度约束</text>
 			</view>
 		</view>
 	</view>
 	<view class="content">
 		<view class="c1">
 			<view class="l">
-				1室1厅1卫0阳台2000/月正规高性价比
+				高学历
 			</view>
 			<view class="r">
 				<view class="r1">
@@ -39,16 +39,16 @@
 		</view>
 		<view class="pt">
 			<view class="inputItem">
-				<text>110万</text>
-				<text class="c">售价</text>
+				<text>8K</text>
+				<text class="c">工资</text>
 			</view>
 			<view class="inputItem be">
-				<text>2室2厅1卫</text>
-				<text class="c">户型</text>
+				<text>负责耐心</text>
+				<text class="c">服务</text>
 			</view>
 			<view class="inputItem be">
-				<text>64.96m²</text>
-				<text class="c">面积</text>
+				<text>98.6%</text>
+				<text class="c">好评率</text>
 			</view>
 		</view>
 		<view class="i">
@@ -59,7 +59,7 @@
 		</view>
 		<view class="side tp">
 			<text>服务保障</text>
-			<text>服务费不超过差价9%，欢迎联系咨询</text>
+			<text>颐养中心可即时预约护理服务，欢迎联系咨询</text>
 		</view>
 		<image bindtap="serve" class="pc1" src="{{images1}}" mode="widthFix"></image>
 		<view class="side">服务顾问</view>
@@ -71,7 +71,7 @@
 					<text class="icon-huizhang"></text>
 					<text>{{info.name}}</text>
 				</view>
-				<text class="info">本人专注服务于该小区，24欢迎来电</text>
+				<text class="info">梅岭社区颐养中心客服，24h欢迎来电</text>
 			</view>
 			<view bindtap="call" class="r2">
 				<view class="cs">
@@ -80,9 +80,9 @@
 				<text class="ct1">联系</text>
 			</view>
 		</view>
-		<view class="side">房源描述</view>
+		<view class="side">梅岭社区颐养中心概述</view>
 		<view class="sideInfo">{{msg}}</view>
-		<view class="side">实勘详情</view>
+		<view class="side">简介</view>
 		<view class="i1">
 			<view wx:for="{{observe}}" wx:key="index" class="w">
 				<text>{{item.name}}：</text>
@@ -93,7 +93,7 @@
 		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
 
 		<view bindtap="goodHouse" class="side1 f">
-			<text class="title">优选房源</text>
+			<text class="title">优选护工</text>
 			<view class="sideL">
 				<text>查看全部</text>
 				<text class="icon-you"></text>
@@ -128,7 +128,7 @@
 				<text>服务顾问</text>
 			</view>
 		</view>
-		<button bindtap="serve" class="btn2">交易服务</button>
-		<button class="btn3" bindtap="call">预约看房</button>
+		<button bindtap="serve" class="btn2">预约服务</button>
+		<button class="btn3" bindtap="call">选定签约</button>
 	</view>
 </view>
