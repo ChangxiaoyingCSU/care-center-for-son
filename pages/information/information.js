@@ -85,7 +85,7 @@ Page({
     var _this = this;
     // 获取IP地址, 请更换为自己的appid和appsecret
     wx.request({
-      url: 'https://www.tianqiapi.com/ip?appid=23035354&appsecret=8YvlPNrz',
+      url: 'https://www.tianqiapi.com/ip?appid=&appsecret=',
       data: {
       },
       method: 'POST',
@@ -103,7 +103,7 @@ Page({
   weatherweekday: function (ip) {
     var _this = this;
     wx.request({
-      url: 'https://www.tianqiapi.com/api/?version=v9&appid=23035354&appsecret=8YvlPNrz',
+      url: 'https://www.tianqiapi.com/api/?version=v9&appid=&appsecret=',
       data: {
         'ip': ip
       },

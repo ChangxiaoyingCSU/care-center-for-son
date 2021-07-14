@@ -1,10 +1,12 @@
 .swiper-input{
   position: absolute;
+  text-align: center;
   top: calc(25vh - 0rpx);
   background: #fffdfd;
   border-radius: 40rpx;
   box-shadow: 0 0 8px #adaba9;
-  left: 43rpx;
+  left: 80rpx;
+  margin: 0 60rpx;
 }
 .container {
   height: 100%;
@@ -15,6 +17,12 @@
 } 
 .padb{
   padding-bottom: 15rpx;
+}
+.tianqi {
+  display: inline-block;
+  margin: 0 20rpx;
+  text-align: center;
+  align-content: center;
 }
 
 
