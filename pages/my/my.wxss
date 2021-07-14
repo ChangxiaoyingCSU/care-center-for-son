@@ -45,7 +45,8 @@
 .middle{
 	display: flex;
 	justify-content: space-between;
-	margin: 40rpx 0rpx 60rpx;
+	margin: 60rpx 0rpx 60rpx;
+	width: 100%;
 }
 .item{
 	display: flex;
