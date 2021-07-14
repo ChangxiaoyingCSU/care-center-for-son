@@ -7,7 +7,7 @@
 	</view>
 
  
-<!--房主直卖-->
+<!--护工信息-->
 <view class='bow'>
     <block wx:for="{{maifangImg}}" wx:key="index">
         <view class="bow-item" bindtap="gotoSelf" hover-class="none" hover-stop-propagation="false" data-index="{{index}}">
@@ -24,7 +24,7 @@
 
 <!--热门活动-->
 <view class="commission">
-<view class='commission-title'>热门活动</view>
+<view class='commission-title'>梅岭社区</view>
   <view class='commission-image' bindtap="gotoGods">
 			<image src="{{img[1]}}" mode="widthFix"/>
   </view>
@@ -38,10 +38,10 @@
 <view class='commission-title'>四大优势</view>
 
   <view class='commission-image' bindtap="gotoGods">
-          <image src="/assets/ad1.png" style="width:100%;height:250rpx"/>
-          <image src="/assets/ad2.png" style="width:100%;height:250rpx" />
-          <image src="/assets/ad3.png" style="width:100%;height:250rpx" />
-          <image src="/assets/ad4.png" style="width:100%;height:250rpx" />
+          <image src="/assets/a1.jpg" style="width:80%"/>
+          <image src="/assets/a2.jpg" style="width:80%" />
+          <image src="/assets/a3.jpg" style="width:80%" />
+          <image src="/assets/a4.jpg" style="width:80%" />
   </view>
 </view>
 

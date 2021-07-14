@@ -131,14 +131,15 @@ left: 8px;
   text-align: center;
 }
 .commission-image image{
-  height: 230rpx !important;
+  height: 300rpx !important;
 }
 .commission-title{
   margin: 20px 0;
   margin-left: 20px;
   letter-spacing: 2px;
   font-size: 44rpx;
-  color: #101d36;
+  color: #0c0c0c;
+  font-family:'Times New Roman', Times, serif;
   line-height: 70rpx;
   font-weight: 700;
 }
