@@ -11,15 +11,15 @@
     <view class="item-list" hover-class="none" hover-stop-propagation="false">
     <!--一次限制3条数据展示-->
         <block wx:if="{{homeListItem==''}}">
-          <view class="list-foot">无房源信息</view>
-          <button class="dz-btn">我要定制找房</button>
-          <view class="list-foot">点击我要定制找房，服务顾问将为您快速找房</view>
+          <view class="list-foot">无护工信息</view>
+          <button class="dz-btn">我要雇佣护工</button>
+          <view class="list-foot">点击我，服务顾问将为您快速寻找护工</view>
         </block>
 				
         <block  wx:for="{{homeListItem}}" wx:key="index" wx:if="{{index<5}}">
         <view bindtap="detail" data-index="{{index}}" class="item-lsti-conent {{ index==2 ? 'sw1':''}}" >
             <view class="data02-tupian">
-                <view class="ysex01 {{item.zd=='1'?'':'hidden'}}"><text class="">精品直卖</text></view>
+                <view class="ysex01 {{item.zd=='1'?'':'hidden'}}"><text class="">优质服务</text></view>
                 <image class="data02-img" src="{{item.img}}" alt="" /> 
             </view>
             <view class="data02-title">
@@ -36,7 +36,7 @@
     
                 <view class="s4">
                 <text  style="color:red;font-weight:800;">{{filters.fnMoney(item.number)}}</text>
-                <text  style="color:red;">万</text> 
+                <text  style="color:red;">K</text> 
                 <image style="width:20px;height:20px" src="{{item.avatar}}"/>        
                 <text>{{item.type}}</text>    
                 </view>
@@ -52,7 +52,7 @@
           <view class="list-foot">房主直卖房源还在持续更新</view>
         </block>
         <block wx:if="{{homeFeuer!=''}}">
-          <button bindtap="gotoLeiBo" type="primary"  class="list-gods" >查看更多房源</button>
+          <button bindtap="gotoLeiBo" type="primary"  class="list-gods" >更多护工信息</button>
         </block>
         
         

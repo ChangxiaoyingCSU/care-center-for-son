@@ -2,6 +2,7 @@
   "usingComponents": { 
     "h-swiper":"/components/h-swiper/h-swiper",
     "home-List-Item":"/components/homeListItem/homeListItem",
-    "xixi":"/components/component/component"
+    "xixi":"/components/component/component",
+    "home-god":"/components/homeGod/homeGod"
   }
 }

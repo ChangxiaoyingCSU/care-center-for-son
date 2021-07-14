@@ -9,9 +9,14 @@
     "pages/my/AboutUs/AboutUs",
     "pages/my/agreement/agreement",
     "pages/my/attention/attention",
-    "pages/my/commonQuestion/commonQuestion"
+    "pages/my/commonQuestion/commonQuestion",
+    "components/homeGod/homeGod"
   ],
-  "permission": {"scope.userLocation": {"desc": "你的位置信息将用于小程序位置接口的效果展示"}},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "tabBar": {
     "color": "#aaafb8",
     "selectedColor": "#27bbb2",
@@ -49,5 +54,4 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
-
 }
