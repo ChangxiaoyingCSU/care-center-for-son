@@ -3,6 +3,8 @@ const db = wx.cloud.database(); // 初始化数据库
 
 function initPage(){
    var customer = wx.getStorageSync('customer');
+   var that = this;
+   that.data.customer = wx.getStorageSync('customer');
 }
 
 Page({
@@ -12,7 +14,7 @@ Page({
     */
    data: {
       avatar:'/assets/home/Headportrait/s04.png',
-      customer:[{
+      customer:{
          "custId": 1,
          "temp": 0.0,
          "pressure": null,
@@ -24,8 +26,8 @@ Page({
          "height": 170.0,
          "sex": "男",
          "name": "张三",
-         "attention": "null"
-     }],
+         "attention": 1
+     },
    },
    confirm(){
       wx.showToast({
@@ -123,7 +125,7 @@ Page({
          //   var healthy = res.data;
             that.data.customer = res.data;
             wx.setStorageSync('customer', that.data.customer);
-            console.log(that.data.customer);
+            // console.log(that.data.customer);
    
          },
          fail:function(res){
@@ -143,7 +145,24 @@ Page({
     * 生命周期函数--监听页面显示
     */
    onShow: function () {
-
+      var customer1 = wx.getStorageSync('customer');
+      console.log(customer1.custId);
+      this.setData({
+         customer :{
+            "custId": customer1.custId,
+            "temp": customer1.temp,
+            "pressure": customer1.pressure,
+            "sugar": customer1.sugar,
+            "weight": customer1.weight,
+            "pulse": customer1.pulse,
+            "selfCare": customer1.selfCare,
+            "day": customer1.day,
+            "height": customer1.height,
+            "sex": customer1.sex,
+            "name": customer1.name,
+            "attention": customer1.attention,
+         } 
+      })
    },
 
    /**
