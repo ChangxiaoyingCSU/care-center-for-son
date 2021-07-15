@@ -1,3 +1,4 @@
+
 // pages/home/homeGod/homeGodList/homeGodList.js
 Page({
 
@@ -7,6 +8,8 @@ Page({
 	collect: false,
 	msg:"位置:此房,前面是小区的绿化带,景观绝好,下楼2m出小区,上班方便。+户型:1室1卫0阳台45m²,保养的太好了,看房方便。装修:普通服务:资深经纪人24h服务热线*承诺:所有离源均为真实有效房源,恭候您的来电咨询！",
 	data: {
+
+		nurContent: null,
 		info:{
 			name: "客服",
 			img:"../../../assets/home/Headportrait/s01.png",
@@ -19,38 +22,40 @@ Page({
 			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587310939038&di=e248b575af0fe89bfd3dda3e60d3e35b&imgtype=0&src=http%3A%2F%2Fimg5.cache.netease.com%2Fhouse%2F2014%2F6%2F5%2F2014060513434168c46_550.jpg"
 		],
 		// name不赋值  只赋值price
-		houseInfo: [{
-				name: "编号",
-				price: "1"
-			},
-			{
-				name: "姓名",
-				price: "小陈"
-			},
-			{
-				name: "性别",
-				price: "女"
-			},
-			{
-				name: "年龄",
-				price: "56"
-			},
-			{
-				name: "工资",
-				price: "8K"
-			},
-			{
-				name: "性格",
-				price: "负责、有耐心"
-			},
-			{
-				name: "服务编号",
-				price: "1"
-			},
-			{
-				name: "服务等级",
-				price: "高级"
-			},
+		houseInfo: [
+			
+			// {
+			// 	name: "编号",
+			// 	price: "1"
+			// },
+			// {
+			// 	name: "姓名",
+			// 	price: "aaa"
+			// },
+			// {
+			// 	name: "性别",
+			// 	price: "女"
+			// },
+			// {
+			// 	name: "年龄",
+			// 	price: "56"
+			// },
+			// {
+			// 	name: "工资",
+			// 	price: "8K"
+			// },
+			// {
+			// 	name: "性格",
+			// 	price: "负责、有耐心"
+			// },
+			// {
+			// 	name: "服务编号",
+			// 	price: "1"
+			// },
+			// {
+			// 	name: "服务等级",
+			// 	price: "高级"
+			// },
 			{
 				name: "学历",
 				price: "普通本科"
@@ -223,7 +228,7 @@ Page({
 				homeS: "在职"
 			}
 		]
-	},
+	}, 
 
 	/**
 	 * 生命周期函数--监听页面加载
@@ -279,11 +284,15 @@ Page({
 		})
 	},
 	onLoad: function(options) {
-		console.log(options)
+		console.log(options);
+		var that = this;
+		that.setData({nurContent:JSON.parse(options.nurContent)});
+		// this.data.nurContent = JSON.parse(options.nurContent);
+		console.log(this.data.nurContent.nurseId);
 	},
 	serve() {
 		wx.navigateTo({
-			url: '/pages/home/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther'
+			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther'
 		})
 	},
 
