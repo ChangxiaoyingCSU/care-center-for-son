@@ -3,6 +3,7 @@
 			"excellentHouse":"/components/excellentHouse/excellentHouse",
 			"nearbyNewHouse":"/components/nearbyNewHouse/nearbyNewHouse",
 			"personalHousing":"/components/personalHousing/personalHousing",
-			"swiper":"/components/swiper/swiper"
+			"swiper":"/components/swiper/swiper",
+			"homeGod":"/components/homeGod/homeGod"
 	}
 }

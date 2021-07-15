@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "small-tag-list":"/components/small-tag-list/small-tag-list"
+  }
+}

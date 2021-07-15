@@ -1,0 +1,17 @@
+/* components/smallTag/index.wxss */
+.small-tag{
+        max-width: 100rpx;
+        padding: 10rpx 20rpx;
+        border-radius: 30rpx;
+        margin-right: 10rpx;
+        margin-bottom:10rpx;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
+.tag-text{
+        white-space: nowrap;
+        word-break: keep-all;
+        color:#666;
+}
