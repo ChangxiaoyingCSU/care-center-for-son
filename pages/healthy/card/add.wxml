@@ -1,0 +1,54 @@
+<view class="banner">
+   <text>填写你要的客户</text>
+</view>
+<view class="content">
+<form class="form-area" catchsubmit="addInfo" >
+   <view class="avatar">
+       <image class="avatar-img" mode="aspectFill" src="{{avatar}}" bind:tap="chooseImg"></image>
+       <text class="avatar-name">{{username}}</text>
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="nickname">微信昵称</label>
+      <input id="nickname" name="nickname" class="input-item" type="text" placeholder="请输入微信昵称" />
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="username">姓名</label>
+      <input id="username" name="username" class="input-item" type="text" placeholder="请输入姓名" />
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="username">性别</label>
+      <view class="input-item">
+         <radio-group  name="sex">
+            <radio value="1"  checked="true"/>男
+            <radio value="0" />女
+         </radio-group>
+      </view>
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="tag">城市</label>
+      <input class="input-item" id="city" name="city" type="text" placeholder="请输入城市" />
+   </view>
+   <view class="input-group">
+      <mp-icon icon="mobile-contacts" color="black" size="{{23}}"></mp-icon>
+      <label for="phone">电话</label>
+      <input class="input-item" id="phone" name="phone" type="number" confirm-type="done" placeholder="请输入电话号码" />
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="tag">标签</label>
+      <input class="input-item" id="tag" name="tag" type="text" placeholder="请输入标签" />
+   </view>
+   <view class="input-group">
+      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
+      <label for="remark">备注</label>
+      <textarea class="remark" id="remark" name="remark" type="text" placeholder="请输入备注"></textarea>
+   </view>
+   <view class="btn-area">
+      <button type="default" form-type="submit">提交</button>
+   </view>
+</form>
+</view>

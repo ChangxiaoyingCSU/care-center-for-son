@@ -15,7 +15,9 @@
     "pages/information/information",
     "components/h-swiper1/h-swiper1",
     "components/small-tag-list/small-tag-list",
-    "components/smallTag/smallTag"
+    "components/smallTag/smallTag",
+    "components/card/add",
+    "components/icon/icon"
   ],
   "permission": {
     "scope.userLocation": {

@@ -1,6 +1,6 @@
 <view class="container">
 	<image bindtap="healthy" src="{{imgas1}}" mode="widthFix" class="imghealthy1"></image>
-	<image bindtap="healthy" src="{{imgas1}}" mode="widthFix" class="imghealthy1"></image>
+	<image bindtap="healthy2" src="{{imgas4}}" mode="widthFix" class="imghealthy2"></image>
 
 	<!-- <view class="sell">
 		<image  src="{{imgas2}}" mode="widthFix"></image>
