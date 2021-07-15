@@ -2,68 +2,68 @@
    <text>客户单日健康报表</text>
 </view>
 <view class="content">
-<form class="form-area" catchsubmit="addInfo" >
+<form class="form-area" catchsubmit="addInfo" wx:for="{{customer}}">
    <view class="avatar">
        <image class="avatar-img" mode="aspectFill" src="{{avatar}}" bind:tap="chooseImg"></image>
    </view>
    <view class="input-group">
       <text>{{healthy.day}}</text>
    </view>
-   <view class="input-group">
+   <!-- <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="id">编号</label>
       <input id="id" name="id" class="input-item" type="text" disabled="disabled" value="{{customer.id}}" />
-   </view>
+   </view> -->
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="username">姓名</label>
       <input id="username" name="username" class="input-item" type="text" disabled="disabled"
-      value="{{customer.name}}"/>
+      value="{{item.name}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="sex">性别</label>
-      <input id="sex" name="sex" class="input-item" type="text" disabled="disabled" value="{{customer.sex}}"/>
+      <input id="sex" name="sex" class="input-item" type="text" disabled="disabled" value="{{item.sex}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="height">身高</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{customer.height}}"/>
+      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{item.height}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="height">体温</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.temp}}"/>
+      <label for="temp">体温</label>
+      <input class="input-item" id="temp" name="temp" type="text" disabled="disabled" value="{{item.temp}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="height">血压</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.pressure}}"/>
+      <label for="pressure">血压</label>
+      <input class="input-item" id="pressure" name="pressure" type="text" disabled="disabled" value="{{item.pressure}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="height">血糖</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.sugar}}"/>
+      <label for="sugar">血糖</label>
+      <input class="input-item" id="sugar" name="sugar" type="text" disabled="disabled" value="{{item.sugar}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="height">体重</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.weight}}"/>
+      <label for="weight">体重</label>
+      <input class="input-item" id="weight" name="weight" type="text" disabled="disabled" value="{{item.weight}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="height">脉搏</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.pulse}}"/>
+      <label for="pulse">脉搏</label>
+      <input class="input-item" id="pulse" name="pulse" type="text" disabled="disabled" value="{{item.pulse}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="height">自理能力</label>
-      <input class="input-item" id="height" name="height" type="text" disabled="disabled" value="{{healthy.selfcare}}"/>
+      <input class="input-item" id="selfcare" name="selfcare" type="text" disabled="disabled" value="{{item.selfcare}}"/>
    </view>
    <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="remark">备注</label>
-      <textarea class="remark" id="remark" name="remark" type="text" disabled="disabled"  value="{{customer.attention}}"></textarea>
+      <label for="attention">备注</label>
+      <textarea class="remark" id="attention" name="attention" type="text" disabled="disabled"  value="{{item.attention}}"></textarea>
    </view>
    <view class="btn-area">
       <button type="default" bindtap="confirm">确认收到</button>

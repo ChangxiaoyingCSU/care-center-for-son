@@ -15,7 +15,7 @@ function initChartTemp(canvas, width, height, dpr, healthyList) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周健康信息表',
+      text: '一周体温信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -176,7 +176,7 @@ function initChartWeight(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周健康信息表',
+      text: '一周体重信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -358,7 +358,7 @@ function initChartPress(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周健康信息表',
+      text: '一周血压信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -558,7 +558,7 @@ function initChartSugar(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周健康信息表',
+      text: '一周血糖信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -939,7 +939,7 @@ Page({
       }
  
 		});
-		
+		   
 		wx.request({
       url: 'http://localhost:8088/healthyForSun/getHealthyList',
       data:{
