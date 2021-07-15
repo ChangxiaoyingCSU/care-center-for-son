@@ -6,13 +6,16 @@
     "pages/healthy/diet/diet",
     "pages/healthy/healthy/healthy",
     "pages/healthy/map/map",
+    "pages/healthy/card/card",
     "pages/my/AboutUs/AboutUs",
     "pages/my/agreement/agreement",
     "pages/my/attention/attention",
     "pages/my/commonQuestion/commonQuestion",
     "components/homeGod/homeGod",
     "pages/information/information",
-    "components/h-swiper1/h-swiper1"
+    "components/h-swiper1/h-swiper1",
+    "components/small-tag-list/small-tag-list",
+    "components/smallTag/smallTag"
   ],
   "permission": {
     "scope.userLocation": {

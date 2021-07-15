@@ -1,0 +1,5 @@
+<!--components/smallTag/index.wxml-->
+<view class="small-tag {{bgcolor}}">
+        <text class="tag-text">{{text}}</text>
+</view>
+      

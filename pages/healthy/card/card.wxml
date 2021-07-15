@@ -1,0 +1,29 @@
+<!--components/card/index.wxml-->
+<view class="card-box f-class">
+  <view class="card-top">
+    <!-- 头像 -->
+    <view class="avatar-box">
+      <image class="sex-icon" wx:if="{{sex}}" src="/assets/home/Headportrait/s04.png"></image>
+      <image class="sex-icon" wx:else src="/assets/home/Headportrait/s02.png"></image>
+      <image class="avatar-icon" src="{{avatar}}"></image>
+      <text>{{name}}</text>
+    </view>
+    <!-- 城市信息等 -->
+    <view class="right-box">
+      <view class="user-info">
+        <text class="right-label">城市</text>
+        <text>{{city}}</text>
+      </view>
+      <view class="user-info">
+        <text class="right-label">微信昵称</text>
+        <text  class="wx-nickname">{{wxnick}}</text>
+      </view>
+      <view class="user-info">
+        <text class="right-label">电话</text>
+        <text>{{phone}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 标签 -->
+    <small-tag-list  tags="{{tagsArr}}"/>
+</view>

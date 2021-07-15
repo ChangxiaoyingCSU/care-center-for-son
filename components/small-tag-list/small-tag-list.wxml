@@ -1,0 +1,6 @@
+<!--components/small-tag-list/index.wxml-->
+<view class="tag-box">
+        <block wx:for="{{tags}}" wx:for-item="item" wx:key="index">
+                <small-tag text="{{item}}"/>
+        </block>
+</view>

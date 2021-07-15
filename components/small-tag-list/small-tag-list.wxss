@@ -1,0 +1,14 @@
+/* components/small-tag-list/index.wxss */
+/* 标签 */
+.tag-box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top:20rpx;
+        font-size: 20rpx;
+      }
+      .tag-box::after {
+        content: '';
+        flex: auto;    /* 或者flex: 1 */
+      }

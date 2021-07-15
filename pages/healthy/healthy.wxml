@@ -1,7 +1,7 @@
 <view class="container">
-	<image bindtap="healthy" src="{{imgas1}}" mode="widthFix"></image>
-  <image bindtap="diet" src="{{imgas2}}" mode="widthFix"></image>
-  <image bindtap="location" src="{{imgas3}}" mode="widthFix"></image>
+	<image bindtap="healthy" src="{{imgas1}}" mode="widthFix" class="imghealthy1"></image>
+	<image bindtap="healthy" src="{{imgas1}}" mode="widthFix" class="imghealthy1"></image>
+
 	<!-- <view class="sell">
 		<image  src="{{imgas2}}" mode="widthFix"></image>
 	</view>
@@ -10,3 +10,5 @@
 		<button  bindtap="buy" hover-class="none">帮我找房</button>
 	</view> -->
 </view>
+<image bindtap="diet" src="{{imgas2}}" mode="widthFix"></image>
+<image bindtap="location" src="{{imgas3}}" mode="widthFix"></image>
