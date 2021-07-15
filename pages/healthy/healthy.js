@@ -11,7 +11,7 @@ Page({
   },
 	healthy(){
 		wx.navigateTo({
-			url: 'sell/sell',
+			url: '/pages/healthy/healthy/healthy',
 		})
 	},
 	diet(){
