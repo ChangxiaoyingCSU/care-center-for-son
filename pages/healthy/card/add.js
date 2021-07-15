@@ -6,9 +6,14 @@ Page({
     * 页面的初始数据
     */
    data: {
-      avatar:'/images/boy.png'
+      avatar:'/assets/home/Headportrait/s04.png'
    },
-
+   confirm(){
+      wx.showToast({
+                 title: '已确认',
+               })
+               return ;
+   },
    /**
     * 生命周期函数--监听页面加载
     */
@@ -17,72 +22,72 @@ Page({
    },
 
    // 更换头像
-   chooseImg(){
-      var that = this;
-      wx.chooseImage({
-        count: 1,
-        sizeType:['compressed'],
-        sourceType:['album','camera'],
-        success:function(res){
-           var tempFilePaths = res.tempFilePaths;
-           that.setData({
-               avatar:tempFilePaths[0]
-           })
-        }
-      })
-   },
+   // chooseImg(){
+   //    var that = this;
+   //    wx.chooseImage({
+   //      count: 1,
+   //      sizeType:['compressed'],
+   //      sourceType:['album','camera'],
+   //      success:function(res){
+   //         var tempFilePaths = res.tempFilePaths;
+   //         that.setData({
+   //             avatar:tempFilePaths[0]
+   //         })
+   //      }
+   //    })
+   // },
 
    /**
     * 添加用户信息
     * 微信昵称 nickname、用户名称 username、性别 sex、电话 phone
     */ 
-   addInfo:function(e){
-      console.log(e);
-      let {nickname, username, sex,city, phone, tag, remark} = e.detail.value;
-      // 输入数据检测
-      if(!nickname || !username){
-         wx.showToast({
-           title: '微信昵称或姓名或电话或标签为空',
-         })
-         return ;
-      }
-      if( !phone || !tag){
-         wx.showToast({
-            title: '电话或标签为空',
-          })
-          return ;
-      }
-      //数据存储
-      db.collection('user').add({
-         data: {
-            nickname: username,
-            username: username,
-            sex: sex,
-            city:city,
-            phone: phone,
-            tag: tag,
-            remark: remark,
-            createTime:db.serverDate()
-         }
-      }).then(res=>{
-         console.log(res)
-         //获取前一页面并传参
-         const pages = getCurrentPages();
-         const prevPage = pages[pages.length - 2];//上一页
-         prevPage.setData({
-            fresh:true
-         })
-         //返回到列表
-         wx.navigateBack({
-           delta: 1,
-         })
-      }).catch(err=>{
-         console.log(err)
-      })
+   // addInfo:function(e){
+   //    console.log(e);
+   //    let {nickname, username, sex,city, phone, tag, remark} = e.detail.value;
+   //    // 输入数据检测
+   //    if(!nickname || !username){
+   //       wx.showToast({
+   //         title: '微信昵称或姓名或电话或标签为空',
+   //       })
+   //       return ;
+   //    }
+   //    if( !phone || !tag){
+   //       wx.showToast({
+   //          title: '电话或标签为空',
+   //        })
+   //        return ;
+   //    }
+   //    //数据存储
+   //    db.collection('user').add({
+   //       data: {
+   //          nickname: username,
+   //          username: username,
+   //          sex: sex,
+   //          city:city,
+   //          phone: phone,
+   //          tag: tag,
+   //          remark: remark,
+   //          createTime:db.serverDate()
+   //       }
+   //    }).then(res=>{
+   //       console.log(res)
+   //       //获取前一页面并传参
+   //       const pages = getCurrentPages();
+   //       const prevPage = pages[pages.length - 2];//上一页
+   //       prevPage.setData({
+   //          fresh:true
+   //       })
+   //       //返回到列表
+   //       wx.navigateBack({
+   //         delta: 1,
+   //       })
+   //    }).catch(err=>{
+   //       console.log(err)
+   //    })
 
 
       
-   },
+   // },
 
    /**
     * 生命周期函数--监听页面初次渲染完成

@@ -17,7 +17,7 @@ Page({
   },
   healthy2(){
     wx.navigateTo({
-			url: '/pages/healthy/card/card',
+			url: '/pages/healthy/card/add',
 		})
   },
 	diet(){
