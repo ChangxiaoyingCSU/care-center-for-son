@@ -18,21 +18,21 @@ page{
    z-index:2; */
 }
 .banner{
-   height: 210rpx;
-   background-image: linear-gradient(to bottom right, #3fbaa6, rgb(250, 87, 66));
-	 position: relative;
+   /* height: 110rpx; */
+	 background-image: linear-gradient(to bottom right, #1a7263, #3fbaa6);
+	 top:calc(23vh - 0rpx);
+	 position: absolute;
 	 width: 690rpx;
 	 border-radius: 20rpx;
 	margin-left: 20rpx;
 	margin-right: 20rpx;
 	 box-shadow: 0 0 20rpx rgb(150, 149, 149);
 	 margin: 10rpx 30rpx 50rpx;
-   box-sizing: border-box;
+	 box-sizing: border-box;
 }
 .banner text{
-   position: absolute;
-   top:120rpx;
-   left:120rpx;
+	 position: relative;
+	 margin: 120rpx;
    font-size: 68rpx;
    color:#fff;
 }
@@ -113,6 +113,9 @@ page{
  }
 
  .container {
+	 border: #2436da;
+	 border: solid;
+	 border: 50rpx;
 	 width: 690rpx ;
 	padding: 40rpx;
 	border-radius: 20rpx;

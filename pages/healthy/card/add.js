@@ -61,7 +61,7 @@ function initChartRadar(canvas, width, height, dpr) {
          name: '正常'
        },
        {
-         value: [72, 35.4, 6.0, 85, 123, 110],
+         value: [77, 35.4, 6.0, 85, 123, 110],
          name: '当前状况'
        }
        ]
@@ -77,6 +77,7 @@ Page({
     * 页面的初始数据
     */
    data: {
+    canvasHidden:true,
     winWidth: '',
       avatar:'/assets/home/Headportrait/s04.png',
       customer:{
