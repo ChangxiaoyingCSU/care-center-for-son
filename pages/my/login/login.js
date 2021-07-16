@@ -1,5 +1,8 @@
 Page({
     data: {
+      custName:null,
+      custPhone:null,
+      phone:null,
       pickerHidden: true,
       chosen: ''
     },
@@ -29,9 +32,9 @@ Page({
         url: 'http://localhost:8088/custAndSon/insert',
         data: 
           {
-            name: e.detail.value.custName,
-            phone: e.detail.value.custPhone,
-            wechat: e.detail.value.phone
+            name: this.data.custName,
+            phone: this.data.custPhone,
+            wechat: this.data.phone
           }
         ,
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
@@ -70,5 +73,24 @@ Page({
       this.setData({
         chosen: ''
       })
-    }
+    },
+        // 获取输入账号 
+    custNameInput: function (e) {
+      this.setData({
+        custName: e.detail.value
+      })
+    },
+
+    custPhoneInput: function (e) {
+      this.setData({
+        custPhone: e.detail.value
+      })
+    },
+  
+    // 获取输入密码 
+    phoneInput: function (e) {
+      this.setData({
+        phone: e.detail.value
+      })
+    },
   })
