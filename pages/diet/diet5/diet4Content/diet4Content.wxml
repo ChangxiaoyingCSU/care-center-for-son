@@ -1,0 +1,32 @@
+<!--page/index/diet1/diet1Content/diet1Content.wxml-->
+<view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d">
+    <view class="carditem01" data-c_e_id="wx_view2f47d002">
+        <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover">
+            <image class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="https://i2.chuimg.com/2fe212ae86dd4b74bc401098afd9a38d_2880w_2160h.jpg?imageView2/2/w/300/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
+            <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">美味中餐：</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">生炒牛肉、红烧鱼、爆香鸡蛋、全麦馒头</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">红烧鱼的做法：</text>
+                <text class="dietContent">
+                    1.鱼洗净，两面切花刀，热锅冷油下鱼煎黄，不要去翻动，等煎差不多翻至另一面也煎黄起锅备用。
+                    2.锅放油下大蒜，蒜瓣，生姜，花椒，小米椒炒香放入豆瓣酱炒出红油加料酒去腥。锅中放水，放入鱼，加白糖，生抽，老抽，大火烧开再煮8分钟，放一勺醋大火收汁。
+                    3.起锅放上香菜，淋上汁装盘。
+                </text>
+                
+            </view>
+        </navigator>
+        <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
+            <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
+                <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
+                </view>
+                <!-- <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
+                </view> -->
+            </view>
+            <!-- <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">1小时前</text> -->
+        </view>
+    </view>
+</view>

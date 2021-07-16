@@ -1,0 +1,105 @@
+.time-line{
+  margin-top: 60rpx;
+}
+
+.nav {
+  top: 0rpx;
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  width: 100%;
+  background-color: rgba(241, 231, 231, 0.966);
+  position: fixed;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1rpx floralwhite;
+  flex: 1;
+}
+
+/* 日期显示的样式 */
+.date-info {
+  margin-top: 20rpx;
+  margin-left: 0rpx;
+  width: 150rpx;
+  height: 150rpx;
+  position: relative;
+}
+
+.riqi {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+  font-size: 50rpx;
+  justify-content: center;
+  text-align: center;
+}
+
+.xinqi {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  font-weight: bolder;
+  color: #999;
+  justify-content: center;
+}
+
+.playlog-item {
+  display: flex;
+}
+
+.dotline {
+  width: 35px;
+  position: relative;
+}
+
+.line {
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.dot {
+  width: 33rpx;
+  height: 33rpx;
+  background: pink;
+  position: absolute;
+  top: 40rpx;
+  left: 18%;
+  border-radius: 50%;
+}
+
+.dot-agin {
+  width: 33rpx;
+  height: 33rpx;
+  background: #c4c0c0;
+  position: absolute;
+  top: 40rpx;
+  left: 18%;
+  border-radius: 50%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0;
+  overflow: auto;
+}
+
+.plan-item {
+  display: flex;
+  margin-bottom: 20rpx;
+  height: 80rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  background-color: pink;
+  align-items: center;
+}

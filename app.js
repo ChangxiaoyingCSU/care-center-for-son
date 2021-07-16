@@ -1,4 +1,6 @@
 // app.js
+var coolsite360 = require('./coolsite/index.js');
+
 App({
   onLaunch() {
     // 展示本地存储能力
@@ -9,7 +11,7 @@ App({
     wx.cloud.init({
       traceUser: true,
 
-  })
+    })
     // 登录
     wx.login({
       success: res => {
@@ -18,9 +20,16 @@ App({
     })
   },
   globalData: {
+<<<<<<< Updated upstream
     userInfo: null,
     custName: null,
     custPhone: null,
     phone: null
   }
+=======
+    userInfo: null
+  },
+  coolsite360: coolsite360
+>>>>>>> Stashed changes
 })
+

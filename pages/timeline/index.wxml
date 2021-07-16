@@ -1,0 +1,34 @@
+<view class="nav">
+  <view class="nav-item">7月</view>
+  <view class="nav-item">2021年</view>
+</view>
+<view class="time-line">
+  <block wx:for="{{planArr}}" wx:key="index" wx:for-item="dataarr">
+    <view class="playlog-item">
+      <view class="date-info">
+        <view class="riqi">{{dateArr[index].riqi}} </view>
+        <view class="xinqi">{{dateArr[index].week}}</view>
+      </view>
+
+      <view class="dotline">
+        <view class="line"></view>
+        <view wx:if="{{ curentDate == planList[index]}}">
+          <view class="dot"></view>
+      </view>
+
+      <view wx:else>
+          <view class="dot-agin"></view>
+        </view>
+      </view>
+
+      <view class="content" wx:if="{{dataarr[planList[index]].length}}">
+        <view wx:for="{{ dataarr[planList[index]] }}" wx:for-item="son_arr" wx:key='son_index'>
+            <view class="listWrap2" data-c_e_id="wx_viewd5e8c118"></view>  
+            <include src="../diet/diet1/diet1.wxml"></include>
+            <include src="../diet/diet5/diet4.wxml"></include>
+            <include src="../diet/diet7/diet4.wxml"></include>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

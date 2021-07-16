@@ -1,0 +1,12 @@
+<!--page/index/diet1/diet1.wxml-->
+
+<view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewa0e94324">
+    <navigator url="/pages/diet/diet2/diet2Content/diet2Content" class="listitem-navigator3" data-c_e_id="wx_navigator8274c9db" hover-class="navigator-hover">
+        <image class="wx-image_tBcdCT2" data-c_e_id="wx_image83040396" mode="aspectFill" src="https://i2.chuimg.com/da0c5c9ab66e4d838b79b1c665306ae8_1440w_1080h.jpg?imageView2/2/w/300/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/475bc401227078c5d46f1ebff773bc8f_origin.jpg); "/>
+        <view class="wx-view_cPj0ok2" data-c_e_id="wx_view5c4899b3">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">营养早餐：</text>
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">紫薯、玉米、纳豆、疙瘩汤</text>
+            <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text88ef823c">一般营养的早餐搭配需要:1、水果蔬菜:如生菜沙拉、小番茄、苹果2、饮料：橙汁、猕猴桃汁、豆浆、牛奶3、主食：面包、粥、面食 4、配菜:凉拌海带丝等小菜5、中饭前加餐：核桃、杏仁等坚果这样才能满足上午的膳食需要</text>
+        </view>
+    </navigator>
+</view>

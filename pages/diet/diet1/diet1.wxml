@@ -1,0 +1,13 @@
+<!--page/index/diet1/diet1.wxml-->
+
+<view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewa0e94324">
+    <navigator url="/pages/diet/diet1/diet1Content/diet1Content" class="listitem-navigator3" data-c_e_id="wx_navigator8274c9db" hover-class="navigator-hover">
+        <image class="wx-image_tBcdCT2" data-c_e_id="wx_image83040396" mode="aspectFill" src="https://i2.chuimg.com/1dbc244dd718474e9843c79a5e4fe9f0_1008w_756h.jpg?imageView2/2/w/300/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/475bc401227078c5d46f1ebff773bc8f_origin.jpg); "/>
+        <view class="wx-view_cPj0ok2" data-c_e_id="wx_view5c4899b3">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">营养早餐：</text>
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">南瓜卷、小米菜粥、素烧鹅</text>
+            <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text88ef823c">南瓜卷的做法、小米菜粥的做法、素烧鹅的做法</text>
+        
+        </view>
+    </navigator>
+</view>

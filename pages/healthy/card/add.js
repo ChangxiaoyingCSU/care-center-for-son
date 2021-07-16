@@ -224,7 +224,7 @@ Page({
       console.log(customer1.custId);
       this.setData({
          customer :{
-            "custId": customer1.custId,
+            "custId": 1,
             "temp": customer1.temp,
             "pressure": customer1.pressure,
             "sugar": customer1.sugar,

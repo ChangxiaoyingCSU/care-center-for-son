@@ -1,0 +1,31 @@
+<!--page/index/diet1/diet1Content/diet1Content.wxml-->
+<view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d">
+    <view class="carditem01" data-c_e_id="wx_view2f47d002">
+        <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover">
+            <image class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="https://i2.chuimg.com/32cc32a7435f4551a2b34fcd30316d7f_2880w_2160h.jpg?imageView2/2/w/300/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
+            <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">美味中餐：</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">凉拌藕片、排骨烧笋干、鸡胸肉丸子、鸡蛋炒西红柿、紫米饭</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">鸡胸肉丸子的做法：</text>
+                <text class="dietContent">
+                    1.胡萝卜切粒，鸡胸肉洗干净剁成泥和玉米粒胡萝卜粒混合加入一勺料酒、2勺生抽、一勺蚝油、少许黑胡椒粉、2勺淀粉搅拌均匀，揉成丸子下锅煮熟备用，番茄焯水去皮切粒，锅里放蒜末姜末炒香
+                    2.番茄粒炒出沙，加一碗水煮出味、少许盐、一勺番茄酱加少许胡椒粉倒入鸡肉丸子煮入味即可
+                </text>
+                
+            </view>
+        </navigator>
+        <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
+            <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
+                <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
+                </view>
+                <!-- <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
+                </view> -->
+            </view>
+            <!-- <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">1小时前</text> -->
+        </view>
+    </view>
+</view>

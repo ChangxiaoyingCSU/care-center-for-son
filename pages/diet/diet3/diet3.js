@@ -1,42 +1,21 @@
-// pages/news/news.js
+// page/index/diet1/diet1.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgas1:["../../assets/publish/healthy1-1.png"],
-    imgas4:["../../assets/publish/healthy2-2.png"],
-    imgas2:["../../assets/publish/diet.png"],
-    imgas3:["../../assets/publish/location.gif"]
+
   },
-	healthy(){
-		wx.navigateTo({
-			url: '/pages/healthy/healthy/healthy',
-		})
-  },
-  healthy2(){
-    wx.navigateTo({
-			url: '/pages/healthy/card/add',
-		})
-  },
-	diet(){
-		wx.navigateTo({
-			url: '/pages/timeline/index',
-		})
-	},
-	location(){
-		wx.navigateTo({
-			url: '/pages/healthy/map/map',
-		})
-	},
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
+   
   },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -86,4 +65,3 @@ Page({
 
   }
 })
-//无语！

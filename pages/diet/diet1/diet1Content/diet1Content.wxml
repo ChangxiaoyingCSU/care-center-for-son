@@ -1,0 +1,40 @@
+<!--page/index/diet1/diet1Content/diet1Content.wxml-->
+<view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d">
+    <view class="carditem01" data-c_e_id="wx_view2f47d002">
+        <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover">
+            <image class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="https://i2.chuimg.com/1dbc244dd718474e9843c79a5e4fe9f0_1008w_756h.jpg?imageView2/2/w/300/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
+            <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">营养早餐：</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">南瓜卷、小米菜粥、素烧鹅</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">南瓜卷的做法：</text>
+                <text class="dietContent">1.南瓜去皮蒸好后取200g，按压成泥。或者直接入料理机打成泥再取200g，加面粉揉成稍微有些硬的面团，盖保鲜膜发酵至2倍大。
+                    发酵好的面条取出彻底揉匀，若太软可以再揉进些许干面粉。擀成0.5cm厚的面皮，刷薄油，卷起
+                    2.切段，用筷子按压一下，两边稍微捏合即可。入蒸锅先不开火，发酵15-20分钟。然后大火蒸15-20分钟即可。
+                </text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">小米菜粥的做法：</text>
+                <text class="dietContent">1.先熬一锅小米粥，稠稀程度依个人喜好，建议不要太稠。
+                    2.油麦菜洗净切碎备用。
+                    3.等粥熬好后将油麦菜放入，加盐、鸡精，出锅。
+                </text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">素烧鹅的做法：</text>
+                <text class="dietContent">1.酱油，白糖，鸡精，麻油，用开水泡一碗汤汁，将豆腐皮硬边切下，浸泡在汤汁里
+                    2.泡软豆腐皮边边做内心，把豆腐皮一层一层包起来，每一层要沾上汤汁，隔水蒸3分钟，放大盘晾凉1小时
+                    3.热锅加油，油稍微多一点，开小火，两面煎黄，等凉透再切条状，淋上麻油，就开吃了
+                </text>
+            </view>
+        </navigator>
+        <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
+            <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
+                <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
+                </view>
+                <!-- <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
+                    <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
+                    <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
+                </view> -->
+            </view>
+            <!-- <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">1小时前</text> -->
+        </view>
+    </view>
+</view>

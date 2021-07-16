@@ -1,0 +1,12 @@
+<!--page/index/diet1/diet1.wxml-->
+
+<view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewa0e94324">
+    <navigator url="/pages/diet/diet4/diet4Content/diet4Content" class="listitem-navigator3" data-c_e_id="wx_navigator8274c9db" hover-class="navigator-hover">
+        <image class="wx-image_tBcdCT2" data-c_e_id="wx_image83040396" mode="aspectFill" src="https://i2.chuimg.com/5e020a6d1cd74271a0e463be7b327751_2880w_2160h.jpg?imageView2/2/w/660/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/475bc401227078c5d46f1ebff773bc8f_origin.jpg); "/>
+        <view class="wx-view_cPj0ok2" data-c_e_id="wx_view5c4899b3">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">美味中餐：</text>
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">牛肉丸子西红柿丝瓜汤、红烧茄子、冬菜肉粿、土豆泥秋葵</text>
+            <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text88ef823c">生活需要仪式感</text>
+        </view>
+    </navigator>
+</view>

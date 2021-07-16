@@ -1,0 +1,12 @@
+<!--page/index/diet1/diet1.wxml-->
+
+<view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewa0e94324">
+    <navigator url="/pages/diet/diet9/diet4Content/diet4Content" class="listitem-navigator3" data-c_e_id="wx_navigator8274c9db" hover-class="navigator-hover">
+        <image class="wx-image_tBcdCT2" data-c_e_id="wx_image83040396" mode="aspectFill" src="https://i2.chuimg.com/4f05ca415f044688851ad8a5b17b852d_4032w_3024h.jpg?imageView2/2/w/660/interlace/1/q/90" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/475bc401227078c5d46f1ebff773bc8f_origin.jpg); "/>
+        <view class="wx-view_cPj0ok2" data-c_e_id="wx_view5c4899b3">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">健康晚餐：</text>
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">迷迭香烤鸡腿、南瓜派、培根土豆泥沙拉、蜜汁粗粮</text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text88ef823c">生活需要仪式感</text>
+        </view>
+    </navigator>
+</view>
