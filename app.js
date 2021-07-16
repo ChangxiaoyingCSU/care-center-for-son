@@ -20,16 +20,13 @@ App({
     })
   },
   globalData: {
-<<<<<<< Updated upstream
     userInfo: null,
     custName: null,
     custPhone: null,
-    phone: ""
-  }
-=======
-    userInfo: null
+    phone: "",
+    
   },
   coolsite360: coolsite360
->>>>>>> Stashed changes
-})
+  }
+)
 
