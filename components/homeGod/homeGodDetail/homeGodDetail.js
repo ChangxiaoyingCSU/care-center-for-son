@@ -13,7 +13,7 @@ Page({
 		info:{
 			name: "客服",
 			img:"../../../assets/home/Headportrait/s01.png",
-			phone:10086
+			phone:"10086"
 		},
 		images1:"../../../assets/0bb3c290e353d785fa1bd27391cab43.png",
 		images: [
@@ -62,7 +62,7 @@ Page({
 			},
 			{
 				name: "婚姻状况",
-				price: "已婚"
+				price: "未婚"
 			},
 			{
 				name: "服务年限",
@@ -254,7 +254,7 @@ Page({
 	},
 	call() {
 		wx.makePhoneCall({
-			phoneNumber: this.info.phone
+			phoneNumber: this.data.info.phone
 		})
 	},
 	previewImage() {

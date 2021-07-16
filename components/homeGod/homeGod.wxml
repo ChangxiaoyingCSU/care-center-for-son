@@ -15,7 +15,7 @@
           <button class="dz-btn">我要雇佣护工</button>
           <view class="list-foot">点击此处，服务顾问将为您快速匹配护工</view>
         </block>
-        <block wx:for="{{homeListItem}}" wx:key="index" wx:if="{{index<5}}">
+        <block wx:for="{{homeListItem}}" wx:key="index" wx:if="{{index<8}}">
         <view bindtap="detail" data-index="{{index}}" class="item-lsti-conent {{index==2? 'sw1':''}}" >
             <view class="data02-tupian">
              <view class="ysex01">
@@ -31,8 +31,8 @@
                 <view class="s2">{{item.stmel}}  {{item.stmels}}</view>
 
                 <view class="s3"> 
-                <text  style="color:red;font-size:15px;font-weight:800;">{{filters.fnMoney(item.number)}}</text>
-                <text  style="color:red;">K</text> 
+                <text  style="color:red;font-size:15px;font-weight:800;">{{(item.number)}}</text>
+                <text  style="color:red;">/天</text> 
                 <div  class="vLine"></div>
                 <span>{{item.specifications}}</span>
                 <div  class="vLine"></div>

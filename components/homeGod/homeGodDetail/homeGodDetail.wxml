@@ -131,7 +131,7 @@
 		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
 		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
 
-		<view bindtap="goodHouse" class="side1 f">
+		<!-- <view bindtap="goodHouse" class="side1 f">
 			<text class="title">优选护工</text>
 			<view class="sideL">
 				<text>查看全部</text>
@@ -155,8 +155,8 @@
 				<text>查看全部</text>
 				<text class="icon-you"></text>
 			</view>
-		</view>
-		<nearbyNewHouse nearbyNewHouse="{{nearbyNewHouse}}"></nearbyNewHouse>
+		</view> -->
+		<!-- <nearbyNewHouse nearbyNewHouse="{{nearbyNewHouse}}"></nearbyNewHouse> -->
 	</view>
 	<view class="g"></view>
 	<view class="footer2 ">

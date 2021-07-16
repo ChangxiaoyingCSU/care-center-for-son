@@ -42,7 +42,7 @@ Page({
         },
         {
           img:'/assets/money.png',
-          title:'自主缴费'
+          title:'护工信息'
         }
       ],
       /**测试数据  已废 */
@@ -137,7 +137,7 @@ Page({
         title: '梅岭社区颐养中心服务，营养配餐、清洁卫生、居室安全',
         stmel: '天心区',
         stmels: '梅岭社区',
-        number: '8000',
+        number: '200',
         specifications: '从业7年',
         squaremeter: '98.6',
         homesuper: '任劳任怨',
@@ -150,7 +150,7 @@ Page({
         title: '梅岭社区颐养中心服务，护理卫生、衣物清洗、协助沐浴',
         stmel: '天心区',
         stmels: '梅岭社区',
-        number: '9000',
+        number: '180',
         specifications: '从业3年',
         squaremeter: '89.7',
         homesuper: '热情干练',
@@ -163,7 +163,7 @@ Page({
         title: '梅岭社区颐养中心服务，健康保健，常见老年病的护理，正确掌握给药途径',
         stmel: '天心区',
         stmels: '梅岭社区',
-        number: '6000',
+        number: '220',
         specifications: '从业4年',
         squaremeter: '91.5',
         homesuper: '知识充沛',
@@ -176,7 +176,7 @@ Page({
         title: '梅岭社区颐养中心服务，沟通陪伴，针对病患存在和潜在的心理问题，给予关怀、支持和帮助',
         stmel: '天心区',
         stmels: '梅岭社区',
-        number: '10000',
+        number: '200',
         specifications: '从业6年',
         homesuper: '学历优秀',
         squaremeter: '97.3',
@@ -244,7 +244,7 @@ Page({
       })
     }else if (num == 3){
       wx.navigateTo({
-        url: '/pages/my/AboutUs/AboutUs'
+        url: '/pages/my/nurContent/nurContent'
       })
     }else if (num == 4){
       wx.navigateTo({

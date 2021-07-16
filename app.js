@@ -24,7 +24,7 @@ App({
     userInfo: null,
     custName: null,
     custPhone: null,
-    phone: null
+    phone: ""
   }
 =======
     userInfo: null
