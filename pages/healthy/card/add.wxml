@@ -1,7 +1,7 @@
 <view class="banner">
    <text>客户单日健康报表</text>
 </view>
-<view class="content">
+<view class="container">
 <form class="form-area" catchsubmit="addInfo">
    <view class="avatar">
        <image class="avatar-img" mode="aspectFill" src="{{avatar}}" bind:tap="chooseImg"></image>
@@ -9,12 +9,48 @@
    <view class="input-group">
       <text>{{healthy.day}}</text>
    </view>
+   <text class="info">姓名</text>
+   <view class="margin topq ww">
+		<input style="height: 60rpx !important;margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.name}}"/>
+	</view>
+   <text class="info">性别</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" value="{{customer.name}}" disabled="disabled" value="{{customer.sex}}"/>
+	</view>
+   <text class="info">身高</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.height}}"/>
+	</view>
+   <text class="info">体温</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.temp}}"/>
+	</view>
+   <text class="info">体重</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.weight}}"/>
+	</view>
+   <text class="info">血压</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.pressure}}"/>
+	</view>
+   <text class="info">血糖</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.sugar}}"/>
+	</view>
+   <text class="info">脉搏</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.pulse}}"/>
+	</view>
+   <text class="info">自理能力</text>
+   <view class="margin topq ww">
+		<input style="margin-bottom: 10rpx; text-align: left; padding-left: 20rpx;" bindinput="title" class="titleInput" disabled="disabled" value="{{customer.selfcare}}"/>
+	</view>
+   <text class="info">备注</text>
+   <view class="margin">
+		<textarea value="{{customer.attention}}" maxlength="300" disabled="disabled"></textarea>
+	</view>
+
    <!-- <view class="input-group">
-      <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
-      <label for="id">编号</label>
-      <input id="id" name="id" class="input-item" type="text" disabled="disabled" value="{{customer.id}}" />
-   </view> -->
-   <view class="input-group">
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="username">姓名</label>
       <input id="username" name="username" class="input-item" type="text" disabled="disabled"
@@ -64,9 +100,16 @@
       <mp-icon icon="me" color="black" size="{{23}}"></mp-icon>
       <label for="attention">备注</label>
       <textarea class="remark" id="attention" name="attention" type="text" disabled="disabled"  value="{{customer.attention}}"></textarea>
+   </view> -->
+
+   <text class="info">综合分析</text>
+   <view class="tab_view2" style="height:{{winHeight}}rpx;">
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec6 }}"></ec-canvas>
    </view>
-   <view class="btn-area">
+   
+   
+   <!-- <view class="btn-area">
       <button type="default" bindtap="confirm">确认收到</button>
-   </view>
+   </view> -->
 </form>
 </view>

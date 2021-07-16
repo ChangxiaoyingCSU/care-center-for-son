@@ -1,4 +1,7 @@
 // pages/customs/add.js
+import * as echarts from '../../../ec-canvas/echarts';
+
+const app = getApp();
 const db = wx.cloud.database(); // 初始化数据库
 
 function initPage(){
@@ -6,7 +9,68 @@ function initPage(){
    var that = this;
    that.data.customer = wx.getStorageSync('customer');
 }
-
+function initChartRadar(canvas, width, height, dpr) {
+   const chart = echarts.init(canvas, null, {
+     width: width,
+     height: height,
+     devicePixelRatio: dpr // new
+   });
+   canvas.setChart(chart);
+ 
+   var option = {
+     backgroundColor: "#ffffff",
+     xAxis: {
+       show: false
+     },
+     yAxis: {
+       show: false
+     },
+     radar: {
+       // shape: 'circle',
+       indicator: [{
+         name: '体重',
+         max: 100
+       },
+       {
+         name: '体温',
+         max: 40
+       },
+       {
+         name: '血糖',
+         max: 7
+       },
+       {
+         name: '舒张压',
+         max: 120
+       },
+       {
+         name: '收缩压',
+         max: 150
+       },
+       {
+         name: '脉搏',
+         max: 200
+       }
+       ]
+     },
+     series: [{
+       name: '正常 vs 当前',
+       type: 'radar',
+       data: [{
+         value: [67, 36.6, 5.4, 90, 120, 130],
+         name: '正常'
+       },
+       {
+         value: [72, 35.4, 6.0, 85, 123, 110],
+         name: '当前状况'
+       }
+       ]
+     }]
+   };
+ 
+   chart.setOption(option);
+   return chart;
+ }
 Page({
 
    /**
@@ -28,6 +92,9 @@ Page({
          "name": "张三",
          "attention": 1
      },
+     ec6: {
+      onInit: initChartRadar
+    },
    },
    confirm(){
       wx.showToast({
@@ -110,7 +177,15 @@ Page({
     */
    onLoad: function () {
       var that = this;
-
+      wx.getSystemInfo({
+        success: function (res) {
+          that.setData({
+            winWidth: res.windowWidth,
+            winHeight: res.windowHeight
+          });
+        }
+   
+      });
       wx.request({
          url: 'http://localhost:8088/healthyForSun/getHealthyVO',
          data:{
