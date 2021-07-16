@@ -15,7 +15,7 @@ function initChartTemp(canvas, width, height, dpr, healthyList) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周体温信息表',
+      text: '体温信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -176,7 +176,7 @@ function initChartWeight(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周体重信息表',
+      text: '体重信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -358,7 +358,7 @@ function initChartPress(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周血压信息表',
+      text: '血压信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -558,7 +558,7 @@ function initChartSugar(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周血糖信息表',
+      text: '血糖信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -719,7 +719,7 @@ function initChartPulse(canvas, width, height, dpr) {
   var option = {
     backgroundColor: '#fff',
     title: {
-      text: '一周脉搏信息表',
+      text: '脉搏信息表',
 			left: 'center',
 			fontsize:8
     },
@@ -867,12 +867,92 @@ function initChartPulse(canvas, width, height, dpr) {
   chart.setOption(option);
   return chart;
 }
+function initChartRadar(canvas, width, height, dpr) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    backgroundColor: "#ffffff",
+    xAxis: {
+      show: false
+    },
+    yAxis: {
+      show: false
+    },
+    radar: {
+      // shape: 'circle',
+      indicator: [{
+        name: '体重',
+        max: 100
+      },
+      {
+        name: '体温',
+        max: 40
+      },
+      {
+        name: '血糖',
+        max: 7
+      },
+      {
+        name: '舒张压',
+        max: 120
+      },
+      {
+        name: '收缩压',
+        max: 150
+      },
+      {
+        name: '脉搏',
+        max: 200
+      }
+      ]
+    },
+    series: [{
+      name: '正常 vs 当前',
+      type: 'radar',
+      data: [{
+        value: [67, 36.6, 5.4, 90, 120, 130],
+        name: '正常'
+      },
+      {
+        value: [72, 35.4, 6.0, 85, 123, 110],
+        name: '当前状况'
+      }
+      ]
+    }]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+var util = require('../../../utils/util.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+			area: 0,
+		type: 0,
+		imags:["../../../assets/publish/01.jpg"],
+		weekday: '',
+    week: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+		swiperImg:[
+			{
+				img:"/assets/home/1.png"
+			},
+			{
+				img:"/assets/home/2.png"
+			},
+			{
+				img:"/assets/home/3.png"
+			}
+		],
  		ec1: {
       onInit: initChartWeight
 		},
@@ -887,9 +967,13 @@ Page({
 		},
 		ec5: {
       onInit: initChartPulse
+		},
+		ec6: {
+      onInit: initChartRadar
     },
     // tab切换，方法二
-    selected: 0,
+		selected: 0,
+		color: '#fffff',
 		list: ['体重', '体温', '血压', '血糖','脉搏'],
 		healthyList:[][8]
   
@@ -902,31 +986,66 @@ Page({
     // console.log(index)
     if (index == 0) {
       that.setData({
-        selected: 0
+				selected: 0,
+				color : '#9E87FF'
       })
     } else if (index == 1) {
       that.setData({
-        selected: 1
+				selected: 1,
+				color : '#73DDFF'
       })
     } else if (index == 2) {
       that.setData({
-        selected: 2
+				selected: 2,
+				color : '#FE9A8B'
       })
 		} else if (index == 3){
 			that.setData({
-        selected: 3
+				selected: 3,
+				color : '#F56948'
       })
 		} else {
       that.setData({
-        selected: 4
+				selected: 4,
+				color : '#FF5353'
       })
     }
-  },
+	},
+	onShow: function () {
+		var today=new Date().getDay(); 
+		console.log("today:"+today);
+	 switch (today){
+			 case 0:
+			 this.setData({
+				 weekday: this.week[0]
+			 }) 
+			 break; 
+			 case 1:
+			 case 2:
+			 case 3:
+			 case 4:
+			 case 5:
+			 case 6:
+			this.setData({
+				weekday: this.data.week[today]
+			})
+			 break;
+		 }
+ },
 /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
+		var that = this;
+		var time = util.formatTime(new Date());
+		// 再通过setData更改Page()里面的data，动态更新页面的数据
+		time=time.split(" ")[0].split("/")//变数组
+    this.setData({
+      time: time
+		});
+		
+		console.log(time)
+
     /** 
      * 获取系统信息,系统宽高
      */

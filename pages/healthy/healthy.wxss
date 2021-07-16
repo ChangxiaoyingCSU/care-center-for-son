@@ -1,17 +1,17 @@
-.container {
-	/* height: 100vh; */
-	padding: 5px 20rpx;
-	display: flex;
-	flex-direction: row;
+.container{
+ /* height: 100vh; */ 
+/*无语*/
+ padding: 5px 20rpx; 
+ display: flex; 
+ flex-direction: row;
 }
-image {
+image{
 	width: 100%;
 	height: 350rpx;
-	border-radius: 20rpx;
+  border-radius: 20rpx;
 	margin-bottom: 20rpx;
 }
-
-button {
+button{
 	position: absolute;
 	bottom: 77rpx;
 	width: 190rpx !important;
@@ -25,18 +25,17 @@ button {
 	box-shadow: #ccc 0rpx 0rpx 20rpx 0rpx;
 	padding: 8rpx 0rpx !important;
 }
-
-button:active {
+button:active{
 	filter: brightness(90%);
 }
-.imghealthy1 {
-	width: 50%;
-	margin-right:15rpx;
-	height: 200rpx;
-}
-.imghealthy2 {
-	width: 50%;
-	margin-left:15rpx;
-	height: 200rpx;
-}
+.imghealthy1 { 
+	width: 50%; 
+	margin-right:15rpx; 
+	height: 200rpx; 
+} 
 
+.imghealthy2 { 
+	width: 50%; 
+	margin-left:15rpx; 
+	height: 200rpx; 
+} 

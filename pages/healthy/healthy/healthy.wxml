@@ -2,27 +2,58 @@
   <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
   <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
 </view> -->
-<view class="nav_title">
-  <view class="nav_tab">
-    <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
-      <view class="{{selected==index?'nav_underline':''}}"></view>
-    </view>
-  </view>
-  <!-- tab框显示内容 -->
-  <view class="tab_view" wx:if="{{selected == 0}}" style="height:{{winHeight - 40}}rpx">
-    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
-  </view>
-  <view class="tab_view" wx:if="{{selected == 1}}" style="height:{{winHeight - 40}}rpx">
-    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
-  </view>
-  <view class="tab_view" wx:if="{{selected == 2}}" style="height:{{winHeight - 40}}rpx">
-    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec3 }}"></ec-canvas>
-  </view>
-  <view class="tab_view" wx:if="{{selected == 3}}" style="height:{{winHeight - 40}}rpx">
-    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec4 }}"></ec-canvas>
-  </view>
-  <view class="tab_view" wx:if="{{selected == 4}}" style="height:{{winHeight - 40}}rpx">
-    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec5 }}"></ec-canvas>
-  </view>
-</view>
+<h-swiper swiperImg="{{swiperImg}}"/>
 
+<view>
+	<view class="content">
+    <text class="info">体重信息</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">您的医疗报告</button>
+
+    <text class="info">体温信息</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+
+    <text class="info">血压信息</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec3 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+
+    <text class="info">血糖信息</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec4 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+
+    <text class="info">脉搏信息</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec5 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+
+    <text class="info">综合分析</text>
+    <view class="nav_title">
+      <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec6 }}"></ec-canvas>
+      </view>
+    </view>
+    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+	</view>
+	<!-- <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button> -->
+</view>
+<image src="{{imags}}" mode="aspectFill"></image>

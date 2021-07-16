@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "ec-canvas": "../../../ec-canvas/ec-canvas"
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "h-swiper":"/components/h-swiper/h-swiper"
   },
-  "navigationBarTitleText": "健康信息"
+  "navigationBarTitleText": "健康信息展示"
 }

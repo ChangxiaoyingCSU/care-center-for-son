@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgas1:["../../assets/publish/healthy1.png"],
-    imgas4:["../../assets/publish/healthy2.png"],
+    imgas1:["../../assets/publish/healthy1-1.png"],
+    imgas4:["../../assets/publish/healthy2-2.png"],
     imgas2:["../../assets/publish/diet.png"],
     imgas3:["../../assets/publish/location.gif"]
   },
@@ -86,3 +86,4 @@ Page({
 
   }
 })
+//无语！
