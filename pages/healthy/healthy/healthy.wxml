@@ -1,18 +1,51 @@
-<!-- <view class="chart">
-  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
-  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
-</view> -->
 <h-swiper swiperImg="{{swiperImg}}"/>
-
 <view>
-	<view class="content">
+  <view class="content">
     <text class="info">体重信息</text>
     <view class="nav_title">
       <view class="tab_view2" style="height:{{winHeight - 40}}rpx;">
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">您的医疗报告</button>
+    <button bindtap="weight" class="btn" hover-class="none">Tips</button>
+    <view class="tips" hidden="{{maskHiddenWeight == false}}">
+      <text class="word">BMI指数（英文为Body Mass Index，简称BMI）用体重公斤数除以身高米数平方得出的数字，是国际上常用的衡量人体胖瘦程度以及是否健康的一个标准</text>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th"> 阶段</view>
+          <view class="th">BMI指数</view>
+        </view>
+        <view class="tr">
+          <view class="td">体重过低</view>
+          <view class="td">小于18.5</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td">正常范围</view>
+          <view class="td">18.5~23.9</view>
+        </view>
+        <view class="tr">
+          <view class="td">超重</view>
+          <view class="td">≥24</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td">肥胖前期</view>
+          <view class="td">24~26.9</view>
+        </view>
+        <view class="tr">
+          <view class="td">I度肥胖</view>
+          <view class="td">27~29.9</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td">II度肥胖</view>
+          <view class="td">≥30</view>
+        </view>
+        <view class="tr">
+          <view class="td">III度肥胖</view>
+          <view class="td">≥40</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:60rpx"></view>
 
     <text class="info">体温信息</text>
     <view class="nav_title">
@@ -20,7 +53,33 @@
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">您的医疗报告</button>
+    <button bindtap="temp" class="btn" hover-class="none">Tips</button>
+    <view class="tips" hidden="{{maskHiddenTemp == false}}">
+      <text class="word">疫情防控阶段，如遇发热，请及时就诊</text>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">阶段</view>
+          <view class="th">体温（℃）</view>
+        </view>
+        <view class="tr">
+          <view class="td">低热</view>
+          <view class="td">37.5~38</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td">中度热</view>
+          <view class="td">38~39</view>
+        </view>
+        <view class="tr">
+          <view class="td">高热</view>
+          <view class="td">大于39</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td">超高热</view>
+          <view class="td">大于41</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:60rpx"></view>
 
     <text class="info">血压信息</text>
     <view class="nav_title">
@@ -28,7 +87,28 @@
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec3 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+    <button bindtap="pressure" class="btn" hover-class="none">Tips</button>
+    <view class="tips" hidden="{{maskHiddenPressure == false}}">
+      <text class="word">正常人在清晨空腹血糖浓度为80~120毫克%。空腹血糖浓度超过130毫克%称为高血糖。如果血糖浓度超过160~180毫克%，就有一部分葡萄糖随尿排出，这就是糖尿。血糖浓度低于70毫克%称为低血糖</text>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="tr_single">判断</view>
+        </view>
+        <view class="tr">
+          <view class="td_single">高血压:动脉血压超过正常值的异常升高</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td_single">收缩压≥140mmHg 或舒张压≥90mmHg</view>
+        </view>
+        <view class="tr">
+          <view class="td_single">低血压:动脉血压低于正常值的异常降低</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td_single">收缩压≤90mmHg 或舒张压≤60mmHg</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:60rpx"></view>
 
     <text class="info">血糖信息</text>
     <view class="nav_title">
@@ -36,7 +116,22 @@
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec4 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+    <button bindtap="sugar" class="btn" hover-class="none">Tips</button>
+    <view class="tips" hidden="{{maskHiddenSugar == false}}">
+      <text class="word">正常人在清晨空腹血糖浓度为80~120毫克%。空腹血糖浓度超过130毫克%称为高血糖。如果血糖浓度超过160~180毫克%，就有一部分葡萄糖随尿排出，这就是糖尿。血糖浓度低于70毫克%称为低血糖</text>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="tr_single">判断</view>
+        </view>
+        <view class="tr">
+          <view class="td_single">空腹：3.61～6.05mmol/L（65～109mg/dl）</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td_single">餐后两小时：＜7.77 mmol/L（＜140 mg/dl）</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:60rpx"></view>
 
     <text class="info">脉搏信息</text>
     <view class="nav_title">
@@ -44,7 +139,23 @@
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec5 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+    <button bindtap="pulse" class="btn" hover-class="none">Tips</button>
+    <view class="tips" hidden="{{maskHiddenPulse == false}}">
+      <text class="word">脉搏即动脉搏动，脉搏频率即脉率。正常人脉率规则，不会出现脉搏间隔时间长短不一的现象。正常人脉搏强弱均等，不会出现强弱交替的现象。另外，运动和情绪激动时可使脉搏增快，而休息，睡眠则使脉搏减慢。</text>
+      <text class="word">临床上有许多疾病，特别是心脏病可使脉搏发生变化</text>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="tr_single">判断</view>
+        </view>
+        <view class="tr">
+          <view class="td_single">正常成人为60到100次/分，常为每分钟70-80次，平均约72次/分</view>
+        </view>
+        <view class="tr bg-g">
+          <view class="td_single">老年人较慢，为55到60次/分</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:60rpx"></view>
 
     <text class="info">综合分析</text>
     <view class="nav_title">
@@ -53,7 +164,23 @@
       </view>
     </view>
     <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
-	</view>
-	<!-- <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button> -->
+  </view>
 </view>
-<image src="{{imags}}" mode="aspectFill"></image>
+<!--客服-->
+<view class="keHu-item">
+    <block wx:for="{{KeHuItme}}" wx:key="index" class="default" size="default" type="default">   
+    <view class="KeHuList">
+        <view  bindtap = "gotoWyue" class="ke1">
+        <image src="{{item.img}}"/>
+        <text>{{item.title}}</text>
+        </view>
+				
+        <view  bindtap = "phone" class="ke2">
+            <text>{{item.txt}}</text>
+        </view>
+				
+    </view>
+    </block>
+</view>
+<h-swiper swiperImg="{{swiperImg2}}"/>
+
