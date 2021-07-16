@@ -7,7 +7,7 @@ Page({
   data: {
     swiperImg:[
       {
-        img:"/static/banner/banner1.jpg"
+        img:"/static/banner/g1.jpg"
       },
       {
         img:"/static/banner/banner2.jpg"
@@ -16,8 +16,14 @@ Page({
         img:"/static/banner/banner3.jpg"
       },
       {
-        img:"/static/banner/banner4.jpg"
-      }
+        img:"/static/banner/g4.jpg"
+      },
+      {
+        img:"/static/banner/g5.jpg"
+      },
+      {
+        img:"/static/banner/g6.jpg"
+      },
     ],
     weather: { 'wea_img': 'qing'},//实况天气
     weatherweek:[],//七日天气
