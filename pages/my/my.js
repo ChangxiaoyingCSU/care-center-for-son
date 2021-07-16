@@ -1,12 +1,16 @@
 // pages/my/my.js
+
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
+
+		phone:"",
 		animationData: {},
 		isShow: [0, 0, 0],
+
 	},
 	rotate() {
 		var animation = wx.createAnimation({
@@ -111,8 +115,17 @@ Page({
 		})
 
 	},
+	getInfo(){
+		wx.navigateTo({
+		  url: 'login/login',
+		})
+	},
 	onShow: function() {
-
+		var that = this;
+		that.setData({
+			phone:getApp().globalData.phone,
+		})
+		console.log(this.data.phone)
 	},
 	/**
 	 * 生命周期函数--监听页面加载

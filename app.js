@@ -18,6 +18,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    custName: null,
+    custPhone: null,
+    phone: null
   }
 })

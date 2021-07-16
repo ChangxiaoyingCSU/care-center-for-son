@@ -1,15 +1,19 @@
 <view class="container">
 	<view class="top">
-		<view class="login">
-			<image class="portrait" src="../../assets/home/Headportrait/s01.png"></image>
-			<button bindgetuserinfo="getuserinfo" open-type="getUserInfo"></button>
+		<view class="login" class="portrait">
+			<!-- <image class="portrait" src="../../assets/home/Headportrait/s01.png"></image>-->
+			<!-- <button bindgetuserinfo="getuserinfo" open-type="getUserInfo"></button>  -->
+			<open-data type="userAvatarUrl" bindtap="getInfo" ></open-data>
 		</view>
 		<view class="info">
 			<view class="nickname">
-				<text>浩海星空</text>
-				<image bindtap="rotate" animation="{{animationData}}" class="circle}}" src="../../assets/my/circle.png"></image>
+				
+                <open-data type="userNickName"></open-data> 
+				<!-- <text>浩海星空</text>
+				<image bindtap="rotate" animation="{{animationData}}" class="circle}}" src="../../assets/my/circle.png"></image> -->
 			</view>
-			<text class="phone">绑定电话号码</text>
+			<text class="phone" bindtap="getInfo">电话{{phone}}</text>
+			<text class="phone" bindtap="getInfo">{{userInfo.phone}}</text>
 		</view>
 	</view>
 	<view class="middle">

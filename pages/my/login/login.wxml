@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="page__hd">
+    <text>表单提交</text>
+  </view>
+<form class="page__bd" catchsubmit="formSubmit" catchreset="formReset">
+  <view class="section">
+    <input name="custName" placeholder="CustName" auto-focus/>
+  </view>
+  <view class="section">
+    <input name="custPhone" type="number" placeholder="CustPhone"/>
+  </view>
+  <view class="section">
+    <input name="phone" type="number" placeholder="Your phone"/>
+  </view>
+
+    <view class="btn-area">
+      <button formType="submit">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+    <view class="page__hd" wx:if="{{error}}">
+      <text>{{error}}</text>
+    </view>
+</form>
+</view>
