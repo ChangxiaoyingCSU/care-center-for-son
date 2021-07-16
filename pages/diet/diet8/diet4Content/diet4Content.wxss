@@ -1,4 +1,0 @@
-/* page/index/diet1/diet1Content/diet1Content.wxss */
-page { 
-  background-color: rgb(250, 249, 249); height: 100%; position: relative; width: 100%; overflow: hidden;  
-}

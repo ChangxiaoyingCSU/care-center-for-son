@@ -77,6 +77,7 @@ Page({
     * 页面的初始数据
     */
    data: {
+    winWidth: '',
       avatar:'/assets/home/Headportrait/s04.png',
       customer:{
          "custId": 1,
@@ -95,6 +96,40 @@ Page({
      ec6: {
       onInit: initChartRadar
     },
+    swiperImg:[
+      {
+        img:"/assets/publish/temp1.png"
+      },
+      {
+        img:"/assets/publish/temp4.png"
+      },
+      {
+        img:"/assets/publish/temp3.png"
+      }
+    ],
+    swiperImg2:[
+      {
+        img:"/assets/home/1.png"
+      },
+      {
+        img:"/assets/home/2.png"
+      },
+      {
+        img:"/assets/home/3.png"
+      }
+    ],
+    KeHuItme:[
+      {
+        img:'/assets/svg/Khu.svg',
+        title:"签约服务网点",
+        txt:"一触即达,分分钟解决问题"
+      },
+      {
+        img:'/assets/svg/Phone.svg',
+        title:"客服电话",
+        txt:"400-890-88900"
+      }
+    ],
    },
    confirm(){
       wx.showToast({
@@ -102,76 +137,95 @@ Page({
                })
                return ;
    },
+   saveImageToPhotosAlbum:function () {
+       wx.showLoading({
+           title: '保存中...',
+       })
+       var that = this;
+       //设置画板显示，才能开始绘图
+       that.setData({
+           canvasHidden: false
+       })
+       var unit = that.data.winWidth / 375
+       var path1 = "/assets/export1.png"
+       var context = wx.createCanvasContext('share')
+       var temp = this.data.customer.temp
+       var pressure = this.data.customer.pressure
+       var sugar = this.data.customer.sugar
+       var weight = this.data.customer.weight
+       var pulse = this.data.customer.pulse
+      //  var selfCare = this.data.customer.selfCare
+       var day = this.data.customer.day
+       var height = this.data.customer.height
+       var sex = this.data.customer.sex
+       var name = this.data.customer.name
+       var attention = this.data.customer.attention
+       context.drawImage(path1, 0, 0, unit * 375, unit * 462.5)
+       //   context.drawImage(path4, 48, 200, 280, 128)
+       context.setFontSize(20)
+       context.setFillStyle("#ffffff")
+       context.fillText(name, unit * 120, unit * 138) 
+       context.fillText(sex, unit * 120, unit * 170) 
 
-   // 更换头像
-   // chooseImg(){
-   //    var that = this;
-   //    wx.chooseImage({
-   //      count: 1,
-   //      sizeType:['compressed'],
-   //      sourceType:['album','camera'],
-   //      success:function(res){
-   //         var tempFilePaths = res.tempFilePaths;
-   //         that.setData({
-   //             avatar:tempFilePaths[0]
-   //         })
-   //      }
-   //    })
-   // },
+       context.fillText(height, unit * 120, unit * 205) 
+       context.fillText(weight, unit * 250, unit * 205) 
 
-   /**
-    * 添加用户信息
-    * 微信昵称 nickname、用户名称 username、性别 sex、电话 phone
-    */ 
-   // addInfo:function(e){
-   //    console.log(e);
-   //    let {nickname, username, sex,city, phone, tag, remark} = e.detail.value;
-   //    // 输入数据检测
-   //    if(!nickname || !username){
-   //       wx.showToast({
-   //         title: '微信昵称或姓名或电话或标签为空',
-   //       })
-   //       return ;
-   //    }
-   //    if( !phone || !tag){
-   //       wx.showToast({
-   //          title: '电话或标签为空',
-   //        })
-   //        return ;
-   //    }
-   //    //数据存储
-   //    db.collection('user').add({
-   //       data: {
-   //          nickname: username,
-   //          username: username,
-   //          sex: sex,
-   //          city:city,
-   //          phone: phone,
-   //          tag: tag,
-   //          remark: remark,
-   //          createTime:db.serverDate()
-   //       }
-   //    }).then(res=>{
-   //       console.log(res)
-   //       //获取前一页面并传参
-   //       const pages = getCurrentPages();
-   //       const prevPage = pages[pages.length - 2];//上一页
-   //       prevPage.setData({
-   //          fresh:true
-   //       })
-   //       //返回到列表
-   //       wx.navigateBack({
-   //         delta: 1,
-   //       })
-   //    }).catch(err=>{
-   //       console.log(err)
-   //    })
+       context.fillText(sugar, unit * 120, unit * 240) 
+       context.fillText(pressure, unit * 250, unit * 240) 
 
-
-      
-   // },
-
-   
+       context.fillText(temp, unit * 120, unit * 272)  //绘制文字
+       context.fillText(pulse, unit * 250, unit * 272) 
+     
+       context.fillText(attention, unit * 120, unit * 338) 
+       
+       context.save()
+       context.beginPath()
+         context.restore()
+       //把画板内容绘制成图片，并回调 画板图片路径
+       context.draw(false, function () {
+           wx.canvasToTempFilePath({
+               x: 0,
+               y: 0,
+               width: unit * 375,
+               height: unit * 462.5,
+               destWidth: unit * 375,
+               destHeight: unit * 462.5,
+               canvasId: 'share',
+               success: function (res) {
+                   that.setData({
+                       shareImgPath: res.tempFilePath
+                   })
+                   if (!res.tempFilePath) {
+                       wx.showModal({
+                           title: '提示',
+                           content: '图片绘制中，请稍后重试',
+                           showCancel: false
+                       })
+                   }
+                   console.log(that.data.shareImgPath)
+                   //画板路径保存成功后，调用方法吧图片保存到用户相册
+                   wx.saveImageToPhotosAlbum({
+                       filePath: res.tempFilePath,
+                       //保存成功失败之后，都要隐藏画板，否则影响界面显示。
+                       success: (res) => {
+                           console.log(res)
+                           wx.hideLoading()
+                           that.setData({
+                               canvasHidden: true
+                           })
+                       },
+                       fail: (err) => {
+                           console.log(err)
+                           wx.hideLoading()
+                           that.setData({
+                               canvasHidden: true
+                           })
+                       }
+                   })
+               }
+           })
+       });
+   },
    /**
     * 生命周期函数--监听页面加载
     */
@@ -183,6 +237,7 @@ Page({
             winWidth: res.windowWidth,
             winHeight: res.windowHeight
           });
+          console(winWidth)
         }
    
       });

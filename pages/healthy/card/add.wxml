@@ -1,5 +1,6 @@
+<!-- <h-swiper swiperImg="{{swiperImg}}"/> -->
 <view class="banner">
-   <text>客户单日健康报表</text>
+   <text style="text-align:center;">客户单日健康报表</text>
 </view>
 <view class="container">
 <form class="form-area" catchsubmit="addInfo">
@@ -113,3 +114,29 @@
    </view> -->
 </form>
 </view>
+    
+<view class='more' bindtap='saveImageToPhotosAlbum'>保存图片</view>
+<canvas canvas-id='share' style='width:100vw;height:100vh;' hidden='{{canvasHidden}}'></canvas> 
+<!-- 
+    //这里的 canvas-id 后面要用的上。 
+    //style里的宽高要用上，不设置宽高画板会失效。其中vw和vh是微信的单位，
+    //100vw等于1屏宽，100vh等于1屏高
+    //canvasHidden是控制画板显示隐藏的参数，画板直接设置display none，会导致失效。 -->
+
+<!--客服-->
+<view class="keHu-item">
+    <block wx:for="{{KeHuItme}}" wx:key="index" class="default" size="default" type="default">   
+    <view class="KeHuList">
+        <view  bindtap = "gotoWyue" class="ke1">
+        <image src="{{item.img}}"/>
+        <text>{{item.title}}</text>
+        </view>
+				
+        <view  bindtap = "phone" class="ke2">
+            <text>{{item.txt}}</text>
+        </view>
+				
+    </view>
+    </block>
+</view>
+<h-swiper swiperImg="{{swiperImg2}}"/>
