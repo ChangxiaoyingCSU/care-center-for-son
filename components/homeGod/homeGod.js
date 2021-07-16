@@ -40,7 +40,7 @@ Component({
       wx.request({
         url: 'http://localhost:8088/nurseForCustomer/getNurById',
         data:{
-          id:e.currentTarget.dataset.index + 1
+          id:e.currentTarget.dataset.index + 10001
         }
         ,
         method:'GET',

@@ -20,7 +20,7 @@
         <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
       </view>
     </view>
-    <button bindtap="detail" class="btn" hover-class="none">生成医疗报告</button>
+    <button bindtap="detail" class="btn" hover-class="none">您的医疗报告</button>
 
     <text class="info">血压信息</text>
     <view class="nav_title">

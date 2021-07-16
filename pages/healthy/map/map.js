@@ -5,66 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-	  latitude: 29.40268, //中心点
-	  longitude: 106.54041,//中心点
+	  latitude:28.149387, //中心点
+	  longitude: 112.998914,//中心点
 	  markers:[
 		  {
 			  id: 0,
-			  latitude: 29.40268, //初始位置
-		  	  longitude: 106.54041,//初始位置
+			  latitude: 28.149387, //初始位置
+				longitude:112.998914,//初始位置
 			  iconPath:"/icon/定点.PNG",
 			  width:30,
 			  height:35,
 			  callout:{
-			  	content:"您当前的位置",
+			  	content:"梅岭社区颐养中心",
 			  	fontSize:13,
 			  	borderRadius:5,
 			  	borderWidth:1,
 			  	padding:2,
 			  	display:"BYCLICK"
 			  }
-		  },
-		  
-		  {		
-			  id: 1,
-			  latitude: 29.385396966, 
-			  longitude: 106.515959483,//"乔鹤养老院"
-			  iconPath:"/icon/定点.PNG",
-			  width:30,
-			  height:35
-		  },
-		  {
-		  		id: 2,
-				latitude: 29.408994, 
-				longitude: 106.553443,//"狮子山老年公寓"
-				iconPath:"/icon/定点.PNG",
-				width:30,
-				height:35
-		  },
-		  {
-		  		id: 3,
-				latitude: 29.427551, 
-				longitude: 106.56582,//"小泉养老公寓"
-		  		iconPath:"/icon/定点.PNG",
-		  		width:30,
-		  		height:35
-		  },
-		  {
-		  		id: 4,
-				latitude: 29.374510809,
-				longitude: 106.692200405,//"南彭敬老院"
-		  		iconPath:"/icon/定点.PNG",
-		  		width:30,
-		  		height:35
-		  },
-		  {
-		  		id: 5,
-				latitude: 29.296250809,
-				 longitude: 106.512470405,//"重庆市巴南区快乐养老院"
-		  		iconPath:"/icon/定点.PNG",
-		  		width:30,
-		  		height:35
-		  },
+		  }
 	  ]
 
   },
@@ -82,101 +41,52 @@ Page({
 				  markers:[
 				  		  {
 				  			  id: 0,
-				  			  latitude: 29.40268, //初始位置
-				  		  	  longitude: 106.54041,//初始位置
+				  			  latitude: 28.149387, //初始位置
+				  		  	  longitude: 112.998914,//初始位置
 				  			  iconPath:"/icon/定点.PNG",
 				  			  width:30,
 				  			  height:35,
 				  			  callout:{
-				  			  	content:"您当前的位置",
+				  			  	content:"梅岭社区颐养中心",
 				  			  	fontSize:13,
 				  			  	borderRadius:5,
 				  			  	borderWidth:1,
 				  			  	padding:2,
 				  			  	display:"BYCLICK"
 				  			  }
-				  		  },
-				  		  
-				  		  {		
-				  			  id: 1,
-				  			  latitude: 29.385396966, 
-				  			  longitude: 106.515959483,//"乔鹤养老院"
-				  			  iconPath:"/icon/定点.PNG",
-				  			  width:30,
-				  			  height:35,
-							  callout:{
-							  	content:"乔鹤养老院",
-							  	fontSize:13,
-							  	borderRadius:5,
-							  	borderWidth:1,
-							  	padding:2,
-							  	display:"BYCLICK"
-							  }
-				  		  },
-				  		  {
-				  		  		id: 2,
-				  				latitude: 29.408994, 
-				  				longitude: 106.553443,//"狮子山老年公寓"
-				  				iconPath:"/icon/定点.PNG",
-				  				width:30,
-				  				height:35,
-								callout:{
-									content:"狮子山老年公寓",
-									fontSize:13,
-									borderRadius:5,
-									borderWidth:1,
-									padding:2,
-									display:"BYCLICK"
+								},
+								{
+									id: 1,
+									latitude: res.latitude,
+									longitude: res.longitude,
+									iconPath:"/icon/定点.PNG",
+									width:30,
+									height:35,
+									callout:{
+										content:"您当前的位置",
+										fontSize:13,
+										borderRadius:5,
+										borderWidth:1,
+										padding:2,
+										display:"BYCLICK"
+									}
+								},
+								{
+									id: 2,
+									latitude: 28.138032,
+									longitude: 112.966405,
+									iconPath:"/icon/定点.PNG",
+									width:30,
+									height:35,
+									callout:{
+										content:"您的亲属当前位置",
+										fontSize:13,
+										borderRadius:5,
+										borderWidth:1,
+										padding:2,
+										display:"BYCLICK"
+									}
 								}
-				  		  },
-				  		  {
-				  		  		id: 3,
-				  				latitude: 29.427551, 
-				  				longitude: 106.56582,//"小泉养老公寓"
-				  		  		iconPath:"/icon/定点.PNG",
-				  		  		width:30,
-				  		  		height:35,
-								callout:{
-									content:"小泉养老公寓",
-									fontSize:13,
-									borderRadius:5,
-									borderWidth:1,
-									padding:2,
-									display:"BYCLICK"
-								}
-				  		  },
-				  		  {
-				  		  		id: 4,
-				  				latitude: 29.374510809,
-				  				longitude: 106.692200405,//"南彭敬老院"
-				  		  		iconPath:"/icon/定点.PNG",
-				  		  		width:30,
-				  		  		height:35,
-								callout:{
-									content:"南彭敬老院",
-									fontSize:13,
-									borderRadius:5,
-									borderWidth:1,
-									padding:2,
-									display:"BYCLICK"
-								}
-				  		  },
-				  		  {
-				  		  		id: 5,
-				  				latitude: 29.296250809,
-				  				 longitude: 106.512470405,//"重庆市巴南区快乐养老院"
-				  		  		iconPath:"/icon/定点.PNG",
-				  		  		width:30,
-				  		  		height:35,
-								callout:{
-									content:"重庆市巴南区快乐养老院",
-									fontSize:13,
-									borderRadius:5,
-									borderWidth:1,
-									padding:2,
-									display:"BYCLICK"
-								}
-				  		  },
 				  ]
 				  
 			  })
@@ -190,6 +100,13 @@ Page({
       console.log('=bindregiοnchange=', e)
     },
 
+		/*
+* 很简单，直接在按钮中触发函数调用api即可
+* 返回的res就包含了用户所选择的当前位置信息
+* [api其他配置项请参照文档根据自身需求配置]
+*/
+
+ 
  /**
    * 点击地图事件，有经纬度信息返回
    * @param {*} e 

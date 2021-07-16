@@ -3,7 +3,7 @@
 <view class='item_view'>
   <view class='item-bk'>
     <image class="iconfont icon-yonghu1"></image>
-    <text class="bk-text">重庆市</text>
+    <text class="bk-text"></text>
     <image class="iconfont icon-arrow-down"></image>
   </view>
   <view class='item-sm'>

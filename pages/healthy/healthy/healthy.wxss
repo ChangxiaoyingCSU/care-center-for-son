@@ -154,7 +154,7 @@ input[placeholder]{
 	width:90% !important;
 	border-radius: 50rpx;
 	font-weight: normal;
-	background-color: #3fbaa6;
+	background-color: #e2921a;
 	color: white;
 	margin-top: 40rpx;
 	margin-bottom: 40rpx;
