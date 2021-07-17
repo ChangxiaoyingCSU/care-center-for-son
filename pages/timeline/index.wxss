@@ -8,6 +8,7 @@
   flex-direction: row;
   height: 100rpx;
   width: 100%;
+  font-size: 40rpx;
   background-color:#3fbaa6;
   position: fixed;
 }

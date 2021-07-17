@@ -236,11 +236,11 @@ Page({
       })
     } else if (num == 1){
       wx.navigateTo({
-        url: '/pages/home/homeLeiBo/homeLeiBo?id='+num
+        url: '/pages/healthy/healthy/healthy'
       })
     }else if (num == 2){
       wx.navigateTo({
-        url: '/pages/home/homeWYue/homeWYue'
+        url: '/pages/timeline/index'
       })
     }else if (num == 3){
       wx.navigateTo({

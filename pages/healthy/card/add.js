@@ -254,10 +254,8 @@ Page({
            'content-type': 'application/json' // 默认值
          },
          success:function(res){
-         //   var healthy = res.data;
             that.data.customer = res.data;
             wx.setStorageSync('customer', that.data.customer);
-            // console.log(that.data.customer);
    
          },
          fail:function(res){
