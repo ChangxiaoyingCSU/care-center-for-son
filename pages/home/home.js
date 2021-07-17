@@ -41,7 +41,7 @@ Page({
           title:'膳食情况'
         },
         {
-          img:'/assets/money.png',
+          img:'/assets/doctor.png',
           title:'护工信息'
         }
       ],

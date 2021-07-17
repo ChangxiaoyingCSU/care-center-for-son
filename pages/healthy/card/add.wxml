@@ -7,7 +7,8 @@
 <view class="container">
 <form class="form-area" catchsubmit="addInfo">
    <view class="avatar">
-       <image class="avatar-img" mode="aspectFill" src="{{avatar}}" bind:tap="chooseImg"></image>
+   	<open-data type="userAvatarUrl" bindtap="getInfo" ></open-data>
+       <!-- <image class="avatar-img" mode="aspectFill" src="{{avatar}}" bind:tap="chooseImg"></image> -->
    </view>
    <view class="input-group">
       <text>{{customer.day}}</text>

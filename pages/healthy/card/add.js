@@ -79,7 +79,7 @@ Page({
    data: {
     canvasHidden:true,
     winWidth: '',
-      avatar:'/assets/home/Headportrait/s04.png',
+      avatar:'/assets/home/Headportrait/3.png',
       customer:{
          "custId": 1,
          "temp": 0.0,

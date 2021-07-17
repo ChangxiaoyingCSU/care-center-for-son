@@ -19,7 +19,7 @@ page{
 }
 .banner{
    /* height: 110rpx; */
-	 background-image: linear-gradient(to bottom right, #1a7263, #3fbaa6);
+	 background-image: linear-gradient(to bottom right, #4a9286, #3fbaa6);
 	 top:calc(23vh - 0rpx);
 	 position: absolute;
 	 width: 690rpx;

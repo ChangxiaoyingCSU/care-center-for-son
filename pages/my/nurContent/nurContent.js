@@ -18,6 +18,7 @@ Component({
      * 组件的初始数据
      */
     data: {
+        title:"护工信息",
         homeListItemYx: [
             {
               id: '1',

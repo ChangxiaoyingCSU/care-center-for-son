@@ -13,13 +13,19 @@ Page({
 		info:{
 			name: "客服",
 			img:"../../../assets/home/Headportrait/s01.png",
-			phone:"10086"
+			phone:"13278857900"
 		},
-		images1:"../../../assets/0bb3c290e353d785fa1bd27391cab43.png",
+		images1:"../../../assets/inside/1.jpg",
+		images2:"../../../assets/inside/2.jpg",
+		images3:"../../../assets/inside/3.jpg",
+		images4:"../../../assets/inside/4.jpg",
+		images5:"../../../assets/inside/5.jpg",
+		images6:"../../../assets/inside/6.jpg",
+		images7:"../../../assets/inside/7.jpg",
 		images: [
-			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587310939038&di=e248b575af0fe89bfd3dda3e60d3e35b&imgtype=0&src=http%3A%2F%2Fimg5.cache.netease.com%2Fhouse%2F2014%2F6%2F5%2F2014060513434168c46_550.jpg",
-			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587310939038&di=e248b575af0fe89bfd3dda3e60d3e35b&imgtype=0&src=http%3A%2F%2Fimg5.cache.netease.com%2Fhouse%2F2014%2F6%2F5%2F2014060513434168c46_550.jpg",
-			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587310939038&di=e248b575af0fe89bfd3dda3e60d3e35b&imgtype=0&src=http%3A%2F%2Fimg5.cache.netease.com%2Fhouse%2F2014%2F6%2F5%2F2014060513434168c46_550.jpg"
+			"../../../assets/doctor/1.jpg",
+			"../../../assets/doctor/2.jpg",
+			"../../../assets/doctor/3.jpg"
 		],
 		// name不赋值  只赋值price
 		houseInfo: [

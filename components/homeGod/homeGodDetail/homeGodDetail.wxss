@@ -16,7 +16,7 @@
 	padding: 20rpx 0rpx;
 	border-radius: 30rpx 30rpx 0rpx 0rpx;
 	bottom: 0rpx;
-	color: white;
+	color: rgb(8, 0, 0);
 	justify-content: space-around;
 	padding: 0rpx 40rpx;
 	box-sizing: border-box;
@@ -182,6 +182,7 @@
 }
 .pc1{
 	width: 100%;
+	border-radius: 20rpx;
 }
 .icon-xinxi{
 	font-family: 'iconfont';
@@ -269,7 +270,6 @@
 }
 .sideInfo{
 	text-align: justify;
-	text-spacing: 8rpx;
 	font-size: 28rpx;
 	line-height: 50rpx;
 	color: #333;

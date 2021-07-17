@@ -100,9 +100,8 @@
 			<text>服务保障</text>
 			<text>颐养中心可即时预约护理服务，欢迎联系咨询</text>
 		</view>
-		<image bindtap="serve" class="pc1" src="{{images1}}" mode="widthFix"></image>
+	
 		<view class="side">服务顾问</view>
-
 		<view class="ml">
 			<image src="{{info.img}}" mode="widthFix"></image>
 			<view class="center">
@@ -119,6 +118,16 @@
 				<text class="ct1">联系</text>
 			</view>
 		</view>
+
+		<view class="side">颐养中心室内图</view>
+		<image bindtap="serve" class="pc1" src="{{images1}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images2}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images3}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images4}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images5}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images6}}" mode="widthFix"></image>
+		<image bindtap="serve" class="pc1" src="{{images7}}" mode="widthFix"></image>
+
 		<view class="side">梅岭社区颐养中心概述</view>
 		<view class="sideInfo">{{msg}}</view>
 		<view class="side">简介</view>
@@ -128,8 +137,8 @@
 				<text>{{item.price}}</text>
 			</view>
 		</view>
-		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
-		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
+		<!-- <image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image>
+		<image class="sd" bindtap="other" src="../../../../assets/home/Commission.png" mode="aspectFill"></image> -->
 
 		<!-- <view bindtap="goodHouse" class="side1 f">
 			<text class="title">优选护工</text>

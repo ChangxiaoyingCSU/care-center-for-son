@@ -1,11 +1,11 @@
 <!-- <view class="container">
  
-<view class="login-from"> 
+<view class="-from"> 
 
 <form class="page__bd" catchsubmit="formSubmit" catchreset="formReset">
   <view class="section">
     <image class="nameImage" src="../../img/name.png"></image> 
-    <label class="loginLab">账号</label> 
+    <label class="Lab">账号</label> 
     <input name="custName" placeholder="CustName" auto-focus/>
   </view>
   <view class="section">
@@ -26,23 +26,20 @@
 </view>
 </view> -->
 <view class="container"> 
- 
- <view class="login-icon"> 
- <image class="login-img" src="../../img/loginLog.jpg"></image> 
- </view> 
- <view class="login-from"> 
+
+ <view class="-from"> 
  
  <!--账号-->
  <view class="inputView"> 
   <image class="nameImage" src="../../img/name.png"></image> 
-  <label class="loginLab">家属姓名</label> 
+  <label class="Lab">家属姓名</label> 
   <input class="inputText" placeholder="请输入家属姓名" bindinput="custNameInput" name="custName"/> 
  </view> 
  <view class="line"></view> 
 
  <view class="inputView"> 
   <image class="nameImage" src="../../img/name.png"></image> 
-  <label class="loginLab">家属点数</label> 
+  <label class="Lab">家属电话</label> 
   <input class="inputText" placeholder="请输入家属电话" bindinput="custPhoneInput" name="custPhone"/> 
  </view> 
  <view class="line"></view> 
@@ -50,13 +47,13 @@
  <!--密码-->
  <view class="inputView"> 
   <image class="keyImage" src="../../img/key.png"></image> 
-  <label class="loginLab">您的电话</label> 
+  <label class="Lab">您的电话</label> 
   <input class="inputText" password="true" placeholder="请输入您的电话" bindinput="phoneInput"name="phone" /> 
  </view> 
  
  <!--按钮-->
- <view class="loginBtnView"> 
-  <button class="loginBtn" bindtap="formSubmit" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" >登录</button> 
+ <view class="BtnView"> 
+  <button class="Btn" bindtap="formSubmit" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" >登录</button> 
  </view> 
  </view> 
 </view>
