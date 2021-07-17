@@ -242,6 +242,7 @@ Page({
         }
    
       });
+
       wx.request({
          url: 'http://localhost:8088/healthyForSun/getHealthyVO',
          data:{

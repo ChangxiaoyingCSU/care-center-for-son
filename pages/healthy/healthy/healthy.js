@@ -929,7 +929,6 @@ function initChartRadar(canvas, width, height, dpr) {
   chart.setOption(option);
   return chart;
 }
-var util = require('../../../utils/util.js');
 // 在xx.js里面引入
 Page({
 
@@ -937,6 +936,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    custname:"",
+    phone:"",
     maskHiddenWeight:false,
     maskHiddenTemp:false,
     maskHiddenPressure:false,
@@ -1056,13 +1057,6 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    var time = util.formatTime(new Date());
-    // 再通过setData更改Page()里面的data，动态更新页面的数据
-    time=time.split(" ")[0].split("/")//变数组
-    this.setData({
-      time: time
-    });
-  
     /** 
      * 获取系统信息,系统宽高
      */
@@ -1075,10 +1069,11 @@ Page({
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8088/healthyForSun/getHealthyList',
       data:{
-        custname: "张三",
+        custname:"张三",
         phone:"12345612312"
       },
       method:'GET',
@@ -1086,6 +1081,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success:function(res){
+        console.log("test"+res);
         var healthy = res.data;
         that.data.healthyList = healthy;
         wx.setStorageSync('healthyList', that.data.healthyList);
