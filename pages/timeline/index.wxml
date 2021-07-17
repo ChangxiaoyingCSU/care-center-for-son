@@ -27,16 +27,16 @@
       <view class="content" >
         <!-- <view wx:for="{{Object.values(dataarr).breakfastId}}" wx:for-item="son_arr" wx:key='son_index'> -->
             <!-- <view class="listWrap2" data-c_e_id="wx_viewd5e8c118">{{son_arr.breakfastId}}</view>   -->
-            <view>{{Object.values(dataarr)[0].breakfastId.values }}</view>
-            <include wx:if="{{Object.values(dataarr)[0].breakfastId == 1}}" src="../diet/diet1/diet1.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].breakfastId == 2}}" src="../diet/diet2/diet2.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].breakfastId == 3}}" src="../diet/diet3/diet3.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].lunchId == 4}}" src="../diet/diet4/diet4.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].lunchId == 5}}" src="../diet/diet5/diet4.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].lunchId == 6}}" src="../diet/diet6/diet4.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].dinnerId == 7}}" src="../diet/diet7/diet4.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].dinnerId == 8}}" src="../diet/diet8/diet4.wxml"></include>
-            <include wx:if="{{Object.values(dataarr)[0].dinnerId == 9}}" src="../diet/diet9/diet4.wxml"></include>
+            <!-- <view>{{dataarr.breakfastId}}</view> -->
+            <include wx:if="{{dataarr.breakfastId == 1}}" src="../diet/diet1/diet1.wxml"></include>
+            <include wx:if="{{dataarr.breakfastId == 2}}" src="../diet/diet2/diet2.wxml"></include>
+            <include wx:if="{{dataarr.breakfastId == 3}}" src="../diet/diet3/diet3.wxml"></include>
+            <include wx:if="{{dataarr.lunchId == 4}}" src="../diet/diet4/diet4.wxml"></include>
+            <include wx:if="{{dataarr.lunchId == 5}}" src="../diet/diet5/diet4.wxml"></include>
+            <include wx:if="{{dataarr.lunchId == 6}}" src="../diet/diet6/diet4.wxml"></include>
+            <include wx:if="{{dataarr.dinnerId == 7}}" src="../diet/diet7/diet4.wxml"></include>
+            <include wx:if="{{dataarr.dinnerId == 8}}" src="../diet/diet8/diet4.wxml"></include>
+            <include wx:if="{{dataarr.dinnerId == 9}}" src="../diet/diet9/diet4.wxml"></include>
         <!-- </view> -->
 
         <!-- 烦死了烦死了！！！！！！ -->

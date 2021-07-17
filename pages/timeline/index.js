@@ -107,7 +107,7 @@ Page({
       let breakfastId = breakList[i];
       let lunchId = lunchList[i];
       let dinnerId = dinnerList[i];
-      diet.push({ [day]:{ 'breakfastId':breakfastId, "lunchId":lunchId, 'dinnerId': dinnerId}});
+      diet.push({'breakfastId':breakfastId, "lunchId":lunchId, 'dinnerId': dinnerId});
     }
     console.log(diet);
     return diet;
