@@ -10,6 +10,9 @@ function initPage(){
    that.data.customer = wx.getStorageSync('customer');
 }
 function initChartRadar(canvas, width, height, dpr) {
+    var customer = wx.getStorageSync('customer');
+   var temp = customer.pressure.split("/");
+   var d = [customer.weight,customer.temp,customer.sugar,temp[1],temp[0],customer.pulse];
    const chart = echarts.init(canvas, null, {
      width: width,
      height: height,
@@ -29,23 +32,23 @@ function initChartRadar(canvas, width, height, dpr) {
        // shape: 'circle',
        indicator: [{
          name: '体重',
-         max: 100
+         max: 150
        },
        {
          name: '体温',
-         max: 40
+         max: 45
        },
        {
          name: '血糖',
-         max: 7
+         max: 15
        },
        {
          name: '舒张压',
-         max: 120
+         max: 150
        },
        {
          name: '收缩压',
-         max: 150
+         max: 120
        },
        {
          name: '脉搏',
@@ -57,11 +60,11 @@ function initChartRadar(canvas, width, height, dpr) {
        name: '正常 vs 当前',
        type: 'radar',
        data: [{
-         value: [67, 36.6, 5.4, 90, 120, 130],
+         value: [67, 36.6, 6, 90, 120, 130],
          name: '正常'
        },
        {
-         value: [77, 35.4, 6.0, 85, 123, 110],
+         value: d,
          name: '当前状况'
        }
        ]
@@ -246,8 +249,10 @@ Page({
       wx.request({
          url: 'http://localhost:8088/healthyForSun/getHealthyVO',
          data:{
-           custname: "张三",
+           custname:"张三",
            phone:"12345612312"
+          //  custname:getApp().globalData.custName,
+          //  phone:getApp().globalData.custPhone
          },
          method:'GET',
          header: {

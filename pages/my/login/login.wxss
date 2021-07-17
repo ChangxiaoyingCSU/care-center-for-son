@@ -3,7 +3,7 @@ page{
    } 
     
    .container { 
-     background: url(../../../assets/home/1.png);
+     /* background: url(../../../assets/home/1.png); */
     height: 100%; 
     display: flex; 
     flex-direction: column; 
@@ -12,6 +12,13 @@ page{
     /* background-color: rgb(156, 23, 78) */
    } 
     
+   .background {
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+    background-size:100% 100%;
+    z-index: -1;
+  }
    /*登录图片*/
    .login-icon{ 
     flex: none; 
@@ -25,14 +32,15 @@ page{
    .login-from { 
     margin-top: 0px; 
     flex: auto; 
-    height:100%; background: url(../../../assets/home/1.png);
+    height:100%;
+     /* background: url(../../../assets/home/1.png); */
    } 
     
    .inputView { 
-    /* background-color: #fff;  */
+    background-color: #fff; 
     line-height: 45px; 
     border-radius:20px;
-     border:1px solid #999999;
+    border:1px inset #fff;
    } 
     
    /*输入框*/
@@ -70,12 +78,15 @@ page{
     
    /*按钮*/
    .loginBtnView { 
-    width: 100%; 
-    height: auto; 
-    /* background-color:#DCDCDC;  */
+    width: 1000rpx; 
+    height: 80rpx;
+    color: #FFFFFF;
+    background-color:#3fbaa6; 
     margin-top: 0px; 
     margin-bottom: 0px; 
     padding-bottom: 0px; 
+    border-radius:20px;
+    border:1px solid #3fbaa6;
    } 
     
    .loginBtn { 

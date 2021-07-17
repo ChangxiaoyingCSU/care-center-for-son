@@ -1,25 +1,5 @@
 <view class="container">
 	<swiper class="t1" bindtap="previewImage" swiperImg="{{images}}"></swiper>
-	<view class="top">
-		<view class="t2">
-			<view>
-				<text class="icon-fangwu"></text>
-				<text class="main">优选护工</text>
-			</view>
-			<view class="t">
-				<text class="icon-dui"></text>
-				<text>高效服务</text>
-			</view>
-			<view class="t">
-				<text class="icon-dui"></text>
-				<text>企业保障</text>
-			</view>
-			<view class="t">
-				<text class="icon-dui"></text>
-				<text>制度约束</text>
-			</view>
-		</view>
-	</view>
 	<view class="content">
 		<view class="c1">
 			<view class="l">

@@ -6,7 +6,7 @@ Page({
     currentDay:{},
     dateArr:'',
     planList:[],
-    planArr: [] 
+    planArr: [] ,
   },
   onLoad() {
     var that = this;
@@ -14,8 +14,8 @@ Page({
       url: 'http://localhost:8088/dietForCustomer/getOrderDietById',
       async : false,
       data:{
-        custname: "张三",
-        phone:"12345612312"
+        custname: getApp().globalData.custName,
+        phone:getApp().globalData.custPhone
       },
       method:'GET',
       header: {
@@ -24,10 +24,10 @@ Page({
       success:(res)=>{
         var dietList = res.data;
         // console.log(dietList);
-        var dayList = new Array(3);
-        var breakList = new Array(3); 
-        var lunchList = new Array(3); 
-        var dinnerList = new Array(3); 
+        var dayList = new Array(1);
+        var breakList = new Array(1); 
+        var lunchList = new Array(1); 
+        var dinnerList = new Array(1); 
         for(var i = 0; i < dietList.length; i++){
           dayList[i] = dietList[i].day;
           breakList[i] = dietList[i].breakfastId;

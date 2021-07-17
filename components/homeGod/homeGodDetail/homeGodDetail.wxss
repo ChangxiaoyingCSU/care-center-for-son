@@ -16,7 +16,7 @@
 	padding: 20rpx 0rpx;
 	border-radius: 30rpx 30rpx 0rpx 0rpx;
 	bottom: 0rpx;
-	color: rgb(8, 0, 0);
+	color: white;
 	justify-content: space-around;
 	padding: 0rpx 40rpx;
 	box-sizing: border-box;

@@ -10,7 +10,19 @@ Page({
 		phone:"",
 		animationData: {},
 		isShow: [0, 0, 0],
-
+ 		/**客服数据接口 */
+		KeHuItme:[
+			{
+				img:'../../assets/svg/Khu.svg',
+				title:"签约服务网点",
+				txt:"一触即达,分分钟解决问题"
+			},
+			{
+				img:'../../assets/svg/Phone.svg',
+				title:"客服电话",
+				txt:"400-890-88900"
+			}
+		],
 	},
 	rotate() {
 		var animation = wx.createAnimation({

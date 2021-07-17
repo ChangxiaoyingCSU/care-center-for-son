@@ -25,9 +25,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    gotoLeiBo: function (e) {
+    gotoContent:function(){
       wx.navigateTo({
-        url: '/components/homeLeiBo/homeLeiBo?id=1'
+        url: '/pages/my/nurContent/nurContent'
       })
     },
 		// detail(e){

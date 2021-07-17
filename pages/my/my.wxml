@@ -18,20 +18,20 @@
 	</view>
 	<view class="middle">
 		<view bindtap="buy" class="item">
-			<image src="../../assets/my/menu2.png"></image>
-			<text>买房委托</text>
+			<image src="/assets/location.png"></image>
+			<text>实时定位</text>
 		</view>
 		<view bindtap="release" class="item">
-			<image src="../../assets/my/menu1.png"></image>
-			<text>卖房委托</text>
+			<image src="/assets/healthy.png"></image>
+			<text>健康状况</text>
 		</view>
 		<view bindtap="question" class="item">
-			<image src="../../assets/my/menu4.png"></image>
-			<text>常见问题</text>
+			<image src="/assets/food.png"></image>
+			<text>膳食状况</text>
 		</view>
 		<view bindtap="attention" class="item">
-			<image src="../../assets/my/menu3.png"></image>
-			<text>关注/收藏</text>
+			<image src="/assets/doctor.png"></image>
+			<text>护工信息</text>
 		</view>
 	</view>
 	<view class="sever">用户服务</view>
@@ -54,20 +54,18 @@
 		</view>
 	</view>
 	<view class="sever">我的客服</view>
-	<view class="footer">
-		<view bindtap="goto" class="footer1">
-			<view class="footerTop">
-				<image src="../../assets/my/sever4.png"></image>
-				<text>签约服务网点</text>
-			</view>
-			<text class="info1">一触即达，分分钟解决您的疑问</text>
-		</view>
-		<view bindtap="phone" class="footer1">
-			<view class="footerTop">
-				<image src="../../assets/my/sever5.png"></image>
-				<text>客服电话</text>
-			</view>
-			<text class="info1">400-890-8890</text>
-		</view>
+	<!--客服-->
+	<view class="keHu-item">
+			<block wx:for="{{KeHuItme}}" wx:key="index" class="default" size="default" type="default">   
+			<view class="KeHuList">
+					<view  bindtap = "gotoWyue" class="ke1">
+						<image src="{{item.img}}"/>
+						<text>{{item.title}}</text>
+					</view>
+					<view  bindtap = "phone" class="ke2">
+							<text>{{item.txt}}</text>
+					</view>
+				</view>
+			</block>
 	</view>
-</view>
+	</view>

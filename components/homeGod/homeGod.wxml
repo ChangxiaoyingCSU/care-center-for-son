@@ -4,7 +4,7 @@
 <view class="ysex01 {{item.zd=='1'?'':'hidden'}}"><text class="">优质服务</text></view>
     <view class="data01" wx:for="{{homeFeuer}}" wx:key="index">
         <view class="d1">{{item.title01}}</view>
-        <view bindtap="gotoLeiBo" class="d2">{{item.title02}}
+        <view bindtap="gotoContent" class="d2">{{item.title02}}
         <image src="{{item.img}}" style="width:10px;height:10px"/>
         </view>
     </view>
@@ -53,7 +53,7 @@
           <view class="list-foot">优选护工还在持续更新</view>
         </block>
         <block wx:if="{{homeFeuer!=''}}">
-          <button bindtap="gotoLeiBo" type="primary"  class="list-gods" >查看更多护工信息</button>
+          <button bindtap="gotoContent" type="primary"  class="list-gods" >查看更多护工信息</button>
         </block>
         </view>  
     </view>

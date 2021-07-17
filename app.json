@@ -17,7 +17,8 @@
     "components/small-tag-list/small-tag-list",
     "components/smallTag/smallTag",
     "components/card/add",
-    "components/icon/icon"
+    "components/icon/icon",
+    "pages/my/nurContent/nurContent"
   ],
   "permission": {
     "scope.userLocation": {
