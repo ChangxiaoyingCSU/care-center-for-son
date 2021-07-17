@@ -1073,8 +1073,8 @@ Page({
     wx.request({
       url: 'http://localhost:8088/healthyForSun/getHealthyList',
       data:{
-        custname:"张三",
-        phone:"12345612312"
+        custname:getApp().globalData.custName,
+        phone:getApp().globalData.custPhone,
       },
       method:'GET',
       header: {
