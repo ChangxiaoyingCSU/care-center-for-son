@@ -11,19 +11,68 @@ Page({
     imgas3:["../../assets/publish/location.gif"]
   },
 	healthy(){
-		wx.navigateTo({
-			url: '/pages/healthy/healthy/healthy',
-		})
+    if(getApp().globalData.phone == ""){
+      console.log(getApp().globalData.phone),
+
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录',
+        success: function(res) {
+         if (res.confirm) {
+          console.log('用户点击确定')
+         }
+        }
+       })
+
+    }else{
+      wx.navigateTo({
+        
+        url: '/pages/healthy/healthy/healthy',
+      })
+    }
+
+	
   },
   healthy2(){
-    wx.navigateTo({
-			url: '/pages/healthy/card/add',
-		})
+    if(getApp().globalData.phone == ""){
+      console.log(getApp().globalData.phone),
+
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录',
+        success: function(res) {
+         if (res.confirm) {
+          console.log('用户点击确定')
+         }
+        }
+       })
+
+    }else{
+      wx.navigateTo({
+        url: '/pages/healthy/card/add',
+      })
+    }
   },
 	diet(){
-		wx.navigateTo({
-			url: '/pages/timeline/index',
-		})
+    if(getApp().globalData.phone == ""){
+      console.log(getApp().globalData.phone),
+
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录',
+        success: function(res) {
+         if (res.confirm) {
+          console.log('用户点击确定')
+         }
+        }
+       })
+
+    }else{
+      wx.navigateTo({
+        url: '/pages/timeline/index',
+      })
+    }
+
 	},
 	location(){
 		wx.navigateTo({
