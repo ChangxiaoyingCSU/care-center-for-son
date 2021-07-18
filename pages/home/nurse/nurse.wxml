@@ -25,44 +25,48 @@
       <!-- 护工信息 -->
         <view style="{{curentChoose==false?'':'display: none;'}}" class="itemq">
 					<view>护工编号</view>
-					<text>10001</text>
+					<text>{{nurContent.nurseId}}</text>
 				</view>
 				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}" >
 					<view >护工姓名</view>
-					<text>刘辉</text>
+					<text>{{nurContent.name}}</text>
 				</view>
 				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
 					<view>性  别</view>
-					<text>男</text> 
+					<text>{{nurContent.sex}}</text> 
 				</view>
 				<view class="itemq qq" style="{{curentChoose==false?'':'display: none;'}}">
 					<view>年  龄</view>
-					<text>23</text>
+					<text>{{nurContent.age}}</text>
 				</view>
 				<view class="itemq bb" style="{{curentChoose==false?'':'display: none;'}}">
 					<view>单日价格</view>
-					<text>2000</text>
+					<text>{{nurContent.price}}</text>
 				</view>
 				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
 					<view>描  述</view>
-					<text>做事认真</text>
+					<text>{{nurContent.description}}</text>
 				</view>
 				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
 					<view>护理级别</view>
-					<text>高级</text>
+					<text>{{nurContent.levelName}}</text>
 				</view>
 				
         <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
 					<view>签约时间</view>
-					<text>2021-7-08</text>
+					<text>{{nurContent.startTime}}</text>
 				</view>
         <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
 					<view>签约时长</view>
-					<text>365天</text>
+					<text>{{nurContent.allDays}}</text>
 				</view>
         <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
 					<view>剩余天数</view>
-					<text>355天</text>
+					<text>{{nurContent.lastDays}}</text>
+				</view>
+				<view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
+					<view>到期时间</view>
+					<text>{{nurContent.endTime}}</text>
 				</view>
         <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
 					<button class="btn">续费</button>

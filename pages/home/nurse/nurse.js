@@ -3,6 +3,7 @@ import * as echarts from '../../../ec-canvas/echarts';
 const app = getApp();
 
 function initChart(canvas, width, height, dpr) {
+	var nurContent = wx.getStorageSync('nurContent');
 	const chart = echarts.init(canvas, null, {
 		width: width,
 		height: height,
@@ -19,16 +20,16 @@ function initChart(canvas, width, height, dpr) {
 					fontSize: 11
 				}
 			},
-			labelLine: {
-				show: false
-			},
+			
 			type: 'pie',
 			center: ['50%', '50%'],
-			radius: ['28%', '60%'],
+			radius: ['20%', '40%'],
 			data: [{
-				value: 55
+				value: nurContent.allDays - nurContent.lastDays,
+				name:"使用"
 			}, {
-				value: 20,
+				value: nurContent.lastDays,
+				name:"剩余"
 			}]
 		}]
 	};
@@ -38,7 +39,8 @@ function initChart(canvas, width, height, dpr) {
 }
 Page({
 	data: {
-    curentChoose:true,
+		curentChoose:true,
+		nurContent:null,
 		ec: {
 			onInit: initChart
     },
@@ -87,7 +89,31 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-
+		wx.request({
+      url: 'http://localhost:8088/nurseContent/getNurseContent',
+      data:{
+				custname:"张三",
+				phone:"12345612312"
+        // custname:getApp().globalData.custName,
+        // phone:getApp().globalData.custPhone,
+      },
+      method:'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success:function(res){
+				wx.setStorageSync('nurContent', res.data);
+      },
+      fail:(res)=>{
+        console.log(".....fail.....");
+      }
+		});
+		
+		var nurContent = wx.getStorageSync('nurContent');
+		this.setData({
+			nurContent:nurContent
+		})
+		console.log(nurContent);
 	},
 
 	/**
