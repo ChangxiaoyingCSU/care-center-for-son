@@ -1,4 +1,4 @@
-<view class="container">
+<view bindtap="getInfo" class="container">
 	<view class="top">
 		<view class="login" class="portrait">
 			<!-- <image class="portrait" src="../../assets/home/Headportrait/s01.png"></image>-->

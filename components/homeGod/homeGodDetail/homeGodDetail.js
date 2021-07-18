@@ -23,9 +23,9 @@ Page({
 		images6:"../../../assets/inside/6.jpg",
 		images7:"../../../assets/inside/7.jpg",
 		images: [
-			"../../../assets/doctor/1.jpg",
-			"../../../assets/doctor/2.jpg",
-			"../../../assets/doctor/3.jpg"
+			"/img/1.jpg",
+			"/img/2.jpg",
+			"/img/3.jpg"
 		],
 		// name不赋值  只赋值price
 		houseInfo: [

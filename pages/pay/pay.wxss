@@ -1,9 +1,14 @@
 /* pages/pay/pay.wxss */
 
 .tips{
-  color: brown;
+  color: rgb(212, 255, 19);
+  font-weight: bold;
 }
-
+.wechat{
+  color: #ffffff;
+  font-size: 30rpx;
+	font-weight: bold;
+}
 .rule-text {
   color: rgb(87, 107, 149);
 }
@@ -11,8 +16,38 @@
 .money{
   font-size: 80rpx;
   text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.payPicture{
+  margin: auto;
+  	box-shadow: 0 0 20rpx rgb(150, 149, 149);
+	 margin: 10rpx 30rpx 50rpx;
+	 box-sizing: border-box;
 }
 
-.payPicture{
-  text-align: center;
+.container { 
+  /* background: url(../../../assets/home/1.png); */
+ height: 100%; 
+ display: flex; 
+ flex-direction: column; 
+ padding: 0; 
+ box-sizing: border-box; 
+ /* background-color: rgb(156, 23, 78) */
+} 
+
+.btn {
+	width: 90% !important;
+	border-radius: 50rpx;
+	font-weight: bold;
+	background-color:transparent;
+	color: white;
+	margin-top: 40rpx;
 }

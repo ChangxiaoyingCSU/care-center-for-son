@@ -1,5 +1,53 @@
-<view class="-from"> 
-	<view>这是协议</view>
+<view class="container"> 
+<image class="background" src="/assets/background.png" mode="aspectFill"></image>
+ <view class="-from"> 
+		<view style="height:600rpx"></view>
+		<!--账号-->
+    <view class="tips">
+      <text class="content" space="warn">
+							甲方：   梅岭社区颐养中心       
+							乙方：__________________________
+							一、甲乙双方根据平等自愿的原则，现就涉及看护病人服务过程中的相关权利与义务达成协议，具体内容如下：
+							1、乙方选择梅岭社区颐养中心进行全天候护理管理，在居住期间，需要护工看护，乙方要全天候24小时看护病人。
+							2、乙方要根据病情情况帮助病人进行日常起居生活，包括洗漱，进食，更衣，大小便等。
+							3、乙方要酌情对病人进行擦身并及时更换病人衣物和被褥，对病人换下的衣物和被褥及时清洗和晾晒，并做好病人房间清洁卫生工作。乙方同时要做好个人清洁卫生并保证自身身体健康无任何疾病。
+							二、甲方的权利和义务：
+							1、在医院护理的情况下乙方提供每天24小时的服务，护理劳动薪金为每天_____元。
+							2、甲方保证乙方在陪护期间的.人身安全不受侵害。
+							3、 如果乙方和病人发生纠纷，所有结果由乙方自行承担，并且甲方有权终止此协议。
+							三、其他约定：
+							1、乙方如果因突发状况未能达到协议陪护天数，需要提前1天向甲方说明情况并且找到接替的陪护人员方可离开，不经通知擅自离开则视为放弃陪护薪金。
+							2、乙方由于自身原因突发疾病或者上下班途中受到其他伤害时，应自行承担后果，甲方概不负责。
+							3、甲方保证每天24小时提供热水，三餐饮食。每周固定床单被罩更换数目。
+							4、乙方因工作失职造成看护病人营养不良，坠床，跌伤，走失等严重后果由乙方自行垫付所需费用。
+							5、乙方如果因突发状况未能达到协议陪护天数，需要提前1天向甲方说明情况并且找到接替的陪护人员方可离开，不经通知擅自离开则视为放弃陪护薪金。
+							6、本协议一式两份，甲乙双方各执一份。一经双方签订即时生效。初步预计护理时间为_____结束。护理期限时间一到，本协议自行终止。
+							7、协议期限：_____年_____月_____日————_____年_____月_____日止。
+		</text>
+    </view>
+		<view class="line"></view> 
+		<view class="inputView"> 
+				<image class="nameImage" src="../../img/name.png"></image> 
+				<label class="Lab">您的姓名</label> 
+				<input class="inputText" placeholder="请输入您的姓名" bindinput="nameInput" name="name"/> 
+		</view> 
+		<view class="line"></view> 
+
+		<view class="inputView"> 
+				<image class="nameImage" src="../../img/name.png"></image> 
+				<label class="Lab">签约天数</label> 
+				<input class="inputText" placeholder="请输入想要签约的天数" bindinput="dayInput" name="days"/> 
+		</view> 
+		<view class="line"></view> 
+	<!--按钮--> 
+		<button class="loginBtnView" bindtap="formSubmit" loading="{{loading}}" >支付</button> 
+ </view> 
+</view>
+<!-- <view class="-from"> 
+	<view>
+		<text>{{content}}</text>
+		<text></text>
+	</view>
 
 	<view class="inputView"> 
 		<label class="Lab">姓名</label> 
@@ -13,4 +61,4 @@
 	</view> 
   <view class="line"></view> 
   <button class="pay" bindtap="formSubmit" loading="{{loading}}" >支付</button> 
-</view> 
+</view>  -->

@@ -61,11 +61,6 @@
    <button class='btn' bindtap='saveImageToPhotosAlbum'>获取健康信息图片</button>
 </form>
 </view>     
-<!-- 
-    //这里的 canvas-id 后面要用的上。 
-    //style里的宽高要用上，不设置宽高画板会失效。其中vw和vh是微信的单位，
-    //100vw等于1屏宽，100vh等于1屏高
-    //canvasHidden是控制画板显示隐藏的参数，画板直接设置display none，会导致失效。 -->
 
 <!--客服-->
 <view class="keHu-item">

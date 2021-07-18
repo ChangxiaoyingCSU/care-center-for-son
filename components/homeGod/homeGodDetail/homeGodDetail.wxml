@@ -7,12 +7,12 @@
 			</view>
 			<view class="r">
 				<view class="r1">
-					<text class="icon-fenxiang"></text>
+					<image src="/img/share.png" style="width: 65rpx;height: 60rpx;margin-bottom: 30rpx;"></image>
 					<text class="rt1">分享</text>
 					<button class="share" open-type="share"></button>
 				</view>
 				<view bindtap="collect" class="r1">
-					<text class="icon-shoucang1 {{collect?'red':''}}"></text>
+					<image src="/img/like.png" style="width: 65rpx;height: 60rpx;margin-bottom: 30rpx;"></image>
 					<text class="rt1 {{collect?'red':''}}">收藏</text>
 				</view>
 			</view>
