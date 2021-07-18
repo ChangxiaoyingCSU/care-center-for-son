@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ec-canvas":"../../../ec-canvas/ec-canvas",
+    "h-swiper":"/components/h-swiper/h-swiper"
+  },
+  "navigationBarTitleText": "您的护工"
+}

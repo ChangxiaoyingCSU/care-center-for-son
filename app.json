@@ -19,7 +19,8 @@
     "components/card/add",
     "components/icon/icon",
     "pages/my/nurContent/nurContent",
-    "pages/pay/pay"
+    "pages/pay/pay",
+    "pages/home/nurse/nurse"
   ],
   "permission": {
     "scope.userLocation": {

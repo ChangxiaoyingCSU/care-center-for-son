@@ -278,7 +278,8 @@ Page({
 
     }else if (num == 3){
       wx.navigateTo({
-        url: '/pages/my/nurContent/nurContent'
+        url: '/pages/home/nurse/nurse'
+        // url: '/pages/my/nurContent/nurContent'
       })
     }else if (num == 4){
       wx.navigateTo({

@@ -1,0 +1,90 @@
+<h-swiper swiperImg="{{images}}"/>
+<view style="height:50rpx">
+</view>
+<view class="banner">
+   <text style="text-align:center;">您的护工信息</text>
+</view>
+<view class="container">
+	<view class="type">
+		<text class="item {{isShow==index?'color bold ':''}}" bindtap="calculate" wx:for="{{type}}" wx:key="index" data-index="{{index}}">{{item}}</text>
+	</view>
+	<view class="result">
+		<view class="bt">
+			<text bindtap="choose" class="{{curentChoose?'active':''}}">剩余时间</text>
+			<text bindtap="choose" class="{{!curentChoose?'active':''}}">护工信息</text>
+		</view>
+		<view class="bo">
+    <view class="echart_panel"></view>
+    <view class="box1" style="{{curentChoose==false?'':'display: none;'}}">
+		      <image src="/img/success.png"></image>
+    </view>
+		<view class="box" style="{{curentChoose==true?'':'display: none;'}}">
+		      <ec-canvas ec="{{ec}}"></ec-canvas>
+    </view>
+			<view class="right1">
+      <!-- 护工信息 -->
+        <view style="{{curentChoose==false?'':'display: none;'}}" class="itemq">
+					<view>护工编号</view>
+					<text>10001</text>
+				</view>
+				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}" >
+					<view >护工姓名</view>
+					<text>刘辉</text>
+				</view>
+				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
+					<view>性  别</view>
+					<text>男</text> 
+				</view>
+				<view class="itemq qq" style="{{curentChoose==false?'':'display: none;'}}">
+					<view>年  龄</view>
+					<text>23</text>
+				</view>
+				<view class="itemq bb" style="{{curentChoose==false?'':'display: none;'}}">
+					<view>单日价格</view>
+					<text>2000</text>
+				</view>
+				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
+					<view>描  述</view>
+					<text>做事认真</text>
+				</view>
+				<view class="itemq" style="{{curentChoose==false?'':'display: none;'}}">
+					<view>护理级别</view>
+					<text>高级</text>
+				</view>
+				
+        <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
+					<view>签约时间</view>
+					<text>2021-7-08</text>
+				</view>
+        <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
+					<view>签约时长</view>
+					<text>365天</text>
+				</view>
+        <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
+					<view>剩余天数</view>
+					<text>355天</text>
+				</view>
+        <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
+					<button class="btn">续费</button>
+				</view>
+			</view>
+		</view>
+	</view>	
+</view>
+<!--客服-->
+<view class="keHu-item">
+    <block wx:for="{{KeHuItme}}" wx:key="index" class="default" size="default" type="default">   
+    <view class="KeHuList">
+        <view  bindtap = "gotoWyue" class="ke1">
+        <image src="{{item.img}}"/>
+        <text>{{item.title}}</text>
+        </view>
+				
+        <view  bindtap = "phone" class="ke2">
+            <text>{{item.txt}}</text>
+        </view>
+				
+    </view>
+    </block>
+</view>
+<h-swiper swiperImg="{{swiperImg}}"/>
