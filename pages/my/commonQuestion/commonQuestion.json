@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "h-swiper":"/components/h-swiper/h-swiper"
+  },
 	"navigationBarTitleText": "常见问题"
 }

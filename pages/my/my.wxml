@@ -3,14 +3,11 @@
 		<view class="login" class="portrait">
 			<!-- <image class="portrait" src="../../assets/home/Headportrait/s01.png"></image>-->
 			<!-- <button bindgetuserinfo="getuserinfo" open-type="getUserInfo"></button>  -->
-			<open-data type="userAvatarUrl" bindtap="getInfo" ></open-data>
+			<open-data  type="userAvatarUrl" bindtap="getInfo" ></open-data>
 		</view>
 		<view class="info">
 			<view class="nickname">
-				
-                <open-data type="userNickName"></open-data> 
-				<!-- <text>浩海星空</text>
-				<image bindtap="rotate" animation="{{animationData}}" class="circle}}" src="../../assets/my/circle.png"></image> -->
+                <open-data type="userNickName"></open-data>
 			</view>
 			<text class="phone" bindtap="getInfo">电话{{phone}}</text>
 			<text class="phone" bindtap="getInfo">{{userInfo.phone}}</text>
@@ -36,19 +33,19 @@
 	</view>
 	<view class="sever">用户服务</view>
 	<view class="userSever">
-		<view bindtap="calculate" class="userSeverItem">
-			<image src="../../assets/my/sever3.png"></image>
-			<text>房贷计算</text>
-		</view>
 		<view bindtap="agreement" class="userSeverItem">
-			<image src="../../assets/my/sever1.png"></image>
+			<image src="/assets/my1.png"></image>
 			<text>用户协议</text>
 		</view>
 		<view bindtap="AboutUs" class="userSeverItem">
-			<image src="../../assets/my/sever2.png"></image>
+			<image src="/assets/about.png"></image>
 			<text>关于我们</text>
 		</view>
-		<view class="userSeverItem">
+		<view bindtap="question" class="userSeverItem">
+			<image src="/assets/question.png"></image>
+			<text>常见问题</text>
+		</view>
+		<view bindtap="" class="userSeverItem">
 			<image src=""></image>
 			<text></text>
 		</view>

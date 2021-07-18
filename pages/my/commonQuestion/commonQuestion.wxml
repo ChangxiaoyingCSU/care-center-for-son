@@ -1,3 +1,4 @@
+<h-swiper swiperImg="{{swiperImg}}"/>
 <view class="container">
 	<view class="top">
 		常见问题

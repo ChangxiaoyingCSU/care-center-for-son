@@ -1,8 +1,17 @@
+.container { 
+	/* background: url(../../../assets/home/1.png); */
+ height: 100%; 
+ display: flex; 
+ flex-direction: column; 
+ padding: 0; 
+ box-sizing: border-box; 
+ /* background-color: rgb(156, 23, 78) */
+} 
 .top{
 	width: 100%;
 	padding: 10rpx 30rpx;
 	background-color: #f3f3f3;
-	color: #ccc;
+	color: rgb(49, 49, 49);
 	font-weight: bold;
 	font-size: 28rpx;
 }
@@ -20,5 +29,5 @@
 .icon-you{
 	margin-left: auto;
 	font-family: 'iconfont';
-	color: #ccc;
+	color: rgb(195, 241, 239);
 }

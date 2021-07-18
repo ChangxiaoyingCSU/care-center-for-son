@@ -6,13 +6,20 @@
 }
 .top{
 	width: 100%;
+	height: 300rpx;
 	display: flex;
+	border-bottom-left-radius: 20rpx;
+	border-bottom-right-radius: 20rpx;
+	background-color:#3fbaa6;
+	box-shadow: 0 0 20rpx rgb(150, 149, 149);
+	 margin: 10rpx 30rpx 50rpx;
+	 box-sizing: border-box;
 }
 .portrait{
 	width: 100rpx;
 	height: 100rpx;
 	border-radius: 50%;
-	margin-right: 20rpx;
+	margin: auto;
 }
 .conten1{
 	display: none;
@@ -28,24 +35,29 @@
 .nickname{
 	display: flex;
 	align-items: center;
+	margin: auto;
+	color: #ffffff;
 }
 .nickname text{
+	/* margin: auto; */
+	
 	font-size: 30rpx;
 	font-weight: bold;
 }
 .info{
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
 .phone{
 	font-size: 25rpx;
-	color: #b0b0b0;
+	color: #ffffff;
 }
 .middle{
 	display: flex;
 	justify-content: space-between;
-	margin: 60rpx 0rpx 60rpx;
+	margin: 20rpx 0rpx 60rpx;
 	width: 100%;
 }
 .item{
@@ -60,11 +72,10 @@
 	margin-bottom: 30rpx;
 }
 .sever{
+	text-align: left;
 	 font-size: 30rpx;
 	font-weight: bold;
-	margin-top: 100rpx; 
-	margin-left: 20px;
-	margin: 20px 0;
+	margin: auto;
 	line-height: 70rpx; 
 }
 .userSever{
