@@ -132,8 +132,7 @@ Component({
           success:function(res){
             console.log(res.data)
             wx.redirectTo({
-              url: '/components/homeGod/homeGodDetail/homeGodDetail?nurContent='+JSON.stringify(res.data),
-            
+              url: '/components/homeGod/homeGodDetail/homeGodDetail?nurContent='+JSON.stringify(res.data)
             })
           },
           fail:function(res) {

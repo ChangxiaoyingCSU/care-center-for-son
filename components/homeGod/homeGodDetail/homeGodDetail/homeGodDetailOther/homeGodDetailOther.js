@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      name:null,
+      days:0,
+      money:0,
+      allMoney:0
   },
 
   /**
@@ -20,9 +23,45 @@ Page({
 		wx.navigateBack({
 			delta:1
 		})
-	},
-  onLoad: function (options) {
+  },
+  
+  formSubmit: function(e) {
+    let allMoney = this.getAllMoney();
+    this.setData({
+      allMoney:allMoney
+    })
+    wx.navigateTo({
+      url: '/pages/pay/pay?money='+this.data.money+'&name='+this.data.name+'&days='+this.data.days+'&allMoney='+this.data.allMoney
+    })
+  },
 
+  // 获取输入姓名
+  nameInput: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+
+  // 获取输入天数
+  dayInput: function (e) {
+    this.setData({
+      days: e.detail.value
+    })
+  },
+  
+  onLoad: function (options) {
+    this.setData({
+      money:JSON.parse(options.money)
+    })
+    // console.log(options.allMoney);
+  },
+
+  //获取订单总金额
+  getAllMoney(){
+    // console.log(this.data.days);
+    var allMoney = (this.data.money)*(this.data.days);
+    // console.log(allMoney);
+    return allMoney;
   },
 
   /**

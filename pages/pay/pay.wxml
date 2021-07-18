@@ -1,0 +1,10 @@
+<!--pages/pay/pay.wxml-->
+<view>
+  <view class="wechat">长按识别二维码进行微信支付</view>
+  <view class="money">￥{{allMoney}}</view>
+  <image class="payPicture" src="/img/pay.png"/>
+  <view class="tips">请支付所显示金额，否则合同将签约失败</view>
+  <view class="size-24">如已支付成功，请点击<navigator url="" class="rule-text">生成合同</navigator></view>
+	
+  <!-- <button class="alreadyPay" loading="{{loading}}">已支付成功</button>  -->
+</view>

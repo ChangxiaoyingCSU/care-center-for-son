@@ -1,7 +1,16 @@
-<view class="container">
-	<image src="/assets/home/homeGods/04.jpg"></image>
-	<view class="buttom-item">
-		<button bindtap="back" class="bu1" type="primary" style="width:40%">我知道了</button>
-		<button bindtap="call" class="bu2" type="primary" style="width:40%;background:#0da7ce">联系服务顾问</button>
-	</view>
-</view>
+<view class="-from"> 
+	<view>这是协议</view>
+
+	<view class="inputView"> 
+		<label class="Lab">姓名</label> 
+		<input class="inputText" placeholder="请输入您的姓名" bindinput="nameInput" name="name"/> 
+	</view> 
+  <view class="line"></view> 
+
+	<view class="inputView"> 
+		<label class="Lab">签约天数</label> 
+		<input class="inputText" placeholder="请输入想要签约的天数" bindinput="dayInput" name="days"/> 
+	</view> 
+  <view class="line"></view> 
+  <button class="pay" bindtap="formSubmit" loading="{{loading}}" >支付</button> 
+</view> 

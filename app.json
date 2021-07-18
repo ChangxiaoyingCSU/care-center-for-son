@@ -18,7 +18,8 @@
     "components/smallTag/smallTag",
     "components/card/add",
     "components/icon/icon",
-    "pages/my/nurContent/nurContent"
+    "pages/my/nurContent/nurContent",
+    "pages/pay/pay"
   ],
   "permission": {
     "scope.userLocation": {

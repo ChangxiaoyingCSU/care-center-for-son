@@ -298,7 +298,7 @@ Page({
 	},
 	serve() {
 		wx.navigateTo({
-			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther'
+			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?money='+JSON.stringify(this.data.nurContent.price)
 		})
 	},
 

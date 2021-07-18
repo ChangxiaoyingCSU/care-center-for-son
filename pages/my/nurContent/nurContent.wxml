@@ -1,5 +1,5 @@
 <!--顶部botton标签-->
-<button style="width:100%; background:#3fbaa6;color:#FFFFFF;margin-top:20rpx;margin-right:20rpx;margin-left:20rpx;border-radius: 20rpx;">
+<button style="width:95%; background:#3fbaa6;color:#FFFFFF;margin-top:20rpx;margin-right:20rpx;margin-left:20rpx;border-radius: 20rpx;">
   {{title}}
 </button>
 

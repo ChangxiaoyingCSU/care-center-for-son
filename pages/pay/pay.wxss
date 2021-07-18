@@ -1,0 +1,18 @@
+/* pages/pay/pay.wxss */
+
+.tips{
+  color: brown;
+}
+
+.rule-text {
+  color: rgb(87, 107, 149);
+}
+
+.money{
+  font-size: 80rpx;
+  text-align: center;
+}
+
+.payPicture{
+  text-align: center;
+}
