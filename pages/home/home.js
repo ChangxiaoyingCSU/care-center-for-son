@@ -235,13 +235,47 @@ Page({
         url: '/pages/healthy/map/map'
       })
     } else if (num == 1){
-      wx.navigateTo({
-        url: '/pages/healthy/healthy/healthy'
-      })
+      if(getApp().globalData.phone == ""){
+        console.log(getApp().globalData.phone),
+  
+        wx.showModal({
+          title: '提示',
+          content: '您还未登录',
+          success: function(res) {
+           if (res.confirm) {
+            console.log('用户点击确定')
+           }
+          }
+         })
+  
+      }else{
+          wx.navigateTo({
+            url: '/pages/healthy/healthy/healthy'
+          })
+
+      }
+     
     }else if (num == 2){
-      wx.navigateTo({
-        url: '/pages/timeline/index'
-      })
+      
+      if(getApp().globalData.phone == ""){
+        console.log(getApp().globalData.phone),
+  
+        wx.showModal({
+          title: '提示',
+          content: '您还未登录',
+          success: function(res) {
+           if (res.confirm) {
+            console.log('用户点击确定')
+           }
+          }
+         })
+  
+      }else{
+        wx.navigateTo({
+          url: '/pages/timeline/index'
+        })
+      }
+
     }else if (num == 3){
       wx.navigateTo({
         url: '/pages/my/nurContent/nurContent'
