@@ -5,9 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    
+      nurseId:null,
+  //   nurContent:null,
+      price:null,
       name:null,
       days:0,
-      money:0,
       allMoney:0
   },
   /**
@@ -25,13 +28,42 @@ Page({
   },
   
   formSubmit: function(e) {
-    let allMoney = this.getAllMoney();
-    this.setData({
-      allMoney:allMoney
-    })
-    wx.navigateTo({
-      url: '/pages/pay/pay?money='+this.data.money+'&name='+this.data.name+'&days='+this.data.days+'&allMoney='+this.data.allMoney
-    })
+
+    var that = this; 
+   // console.log(this.data.nurContent),
+   console.log(this.data.nurseId)
+    wx.request({
+      
+      url: 'http://localhost:8088/nurseForCustomer/addNurseAndCust',
+      data:
+      {
+        nurseId:this.data.nurseId,
+  //      nurContent:this.data.nurContent,
+        time:this.data.days,
+        custName:getApp().globalData.custName,
+        custPhone:getApp().globalData.custPhone,
+      }
+    ,
+    method:'POST',
+    header: {
+      'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    },
+    success:function(res){
+        
+        that.setData({
+          allMoney:that.data.price * that.data.days
+        })
+        console.log(that.data.days)
+        wx.navigateTo({
+          url: '/pages/pay/pay?money='+that.data.price+'&name='+that.data.name+'&days='+that.data.days+'&allMoney='+that.data.allMoney
+        })
+
+    },
+    fail: function(res) {
+      console.log("fail...")
+  },
+  })
+
   },
 
   // 获取输入姓名
@@ -49,16 +81,19 @@ Page({
   },
   
   onLoad: function (options) {
-    this.setData({
-      money:JSON.parse(options.money)
+    var that = this;
+    that.setData({
+   //   nurContent:JSON.parse(options.nurContent),
+      nurseId:options.id,
+      price:options.price
     })
-    // console.log(options.allMoney);
+ //   console.log(this.data.nurContent);
   },
 
   //获取订单总金额
   getAllMoney(){
     // console.log(this.data.days);
-    var allMoney = (this.data.money)*(this.data.days);
+    var allMoney = (this.data.nurContent.price)*(this.data.days);
     // console.log(allMoney);
     return allMoney;
   },

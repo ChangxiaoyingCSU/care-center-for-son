@@ -297,8 +297,10 @@ Page({
 		console.log(this.data.nurContent.nurseId);
 	},
 	serve() {
+		console.log(this.data.nurContent);
 		wx.navigateTo({
-			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?money='+JSON.stringify(this.data.nurContent.price)
+			// nurContent='+JSON.stringify(this.data.nurContent)+'
+			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?id='+this.data.nurContent.nurseId+'&price='+this.data.nurContent.price
 		})
 	},
 
