@@ -369,7 +369,7 @@ radio-group{
 .likebtn{width: 28px; height: 28px; background-color: transparent; }
 .likeinfo_count{font-size: 12px; color: rgb(148, 148, 148); padding: 3px 10px; background-color: rgb(240, 240, 240); border-radius: 4px; }
 .listitem_creattime{font-size: 12px; color: rgb(186, 186, 186); padding-right: 2px; }
-.wx-view_JbWxfk{padding-left: 37.5rpx; padding-right: 37.5rpx; height: 100%;}
+.wx-view_JbWxfk{background-color:#AA4A37;padding-left: 37.5rpx; padding-right: 37.5rpx; height: 100%;}
 .carditem01{border-radius: 6px; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.239216) 0px 2px 5px 0px; margin-bottom: 37.5rpx; }
 .wx-view_QvvUkU{justify-content: flex-start; align-items: center; padding: 18.75rpx; border-bottom-color: rgb(237, 237, 237);}
 .wx-navigator_rv4BGW{display: flex; align-items: center; flex-direction: row; justify-content: flex-start; }

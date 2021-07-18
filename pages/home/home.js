@@ -277,9 +277,24 @@ Page({
       }
 
     }else if (num == 3){
-      wx.navigateTo({
-        url: '/pages/home/nurse/nurse'
-      })
+      if(getApp().globalData.phone == ""){
+        console.log(getApp().globalData.phone),
+  
+        wx.showModal({
+          title: '提示',
+          content: '您还未登录',
+          success: function(res) {
+           if (res.confirm) {
+            console.log('用户点击确定')
+           }
+          }
+         })
+  
+      }else{
+        wx.navigateTo({
+          url: '/pages/home/nurse/nurse'
+        })
+      }
     }else if (num == 4){
       wx.navigateTo({
         url: '/pages/home/newHouseList/newHouseList?id='+num
