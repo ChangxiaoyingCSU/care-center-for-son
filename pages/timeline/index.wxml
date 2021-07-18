@@ -3,11 +3,10 @@
   <view class="nav-item">2021年</view>
 </view> -->
 <view class="time-line">
-  <block wx:for="{{planArr}}" wx:key="index" wx:for-item="dataarr">
-  <view class="nav">
-    <view class="nav-item">{{dateArr[index].month}}</view>
-    <view class="nav-item">{{dateArr[index].year}}</view>
-  </view>
+  <image class="background" src="/img/diet.png" mode="aspectFill"></image>
+    <block wx:for="{{planArr}}" wx:key="index" wx:for-item="dataarr">
+    <view class="word">{{dateArr[index].year}} 年 {{dateArr[index].month}} 月</view>
+    <!-- <view style="word"></view> -->
     <view class="playlog-item">
       <view class="date-info">
         <view class="riqi">{{dateArr[index].riqi}} </view>

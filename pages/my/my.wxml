@@ -1,5 +1,5 @@
-<view bindtap="getInfo" class="container">
-	<view class="top">
+<view class="container">
+	<view class="top" bindtap="getInfo">
 		<view class="login" class="portrait">
 			<!-- <image class="portrait" src="../../assets/home/Headportrait/s01.png"></image>-->
 			<!-- <button bindgetuserinfo="getuserinfo" open-type="getUserInfo"></button>  -->
@@ -14,19 +14,19 @@
 		</view>
 	</view>
 	<view class="middle">
-		<view bindtap="buy" class="item">
+		<view bindtap="map" class="item">
 			<image src="/assets/location.png"></image>
 			<text>实时定位</text>
 		</view>
-		<view bindtap="release" class="item">
+		<view bindtap="healthy" class="item">
 			<image src="/assets/healthy.png"></image>
 			<text>健康状况</text>
 		</view>
-		<view bindtap="question" class="item">
+		<view bindtap="diet" class="item">
 			<image src="/assets/food.png"></image>
 			<text>膳食状况</text>
 		</view>
-		<view bindtap="attention" class="item">
+		<view bindtap="nurse" class="item">
 			<image src="/assets/doctor.png"></image>
 			<text>护工信息</text>
 		</view>

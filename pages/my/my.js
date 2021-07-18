@@ -50,20 +50,67 @@ Page({
 			url: 'commonQuestion/commonQuestion'
 		})
 	},
-	attention() {
+	healthy() {
+		if(getApp().globalData.phone == ""){
+			console.log(getApp().globalData.phone),
+			wx.showModal({
+				title: '提示',
+				content: '您还未登录',
+				success: function(res) {
+				 if (res.confirm) {
+					console.log('用户点击确定')
+				 }
+				}
+			 })
+		}else{
+				wx.navigateTo({
+					url: '/pages/healthy/healthy/healthy'
+				})
+		}
+	},
+	diet() {
+		if(getApp().globalData.phone == ""){
+			console.log(getApp().globalData.phone),
+
+			wx.showModal({
+				title: '提示',
+				content: '您还未登录',
+				success: function(res) {
+				 if (res.confirm) {
+					console.log('用户点击确定')
+				 }
+				}
+			 })
+
+		}else{
+			wx.navigateTo({
+				url: '/pages/timeline/index'
+			})
+		}
+	},
+	map() {
 		wx.navigateTo({
-			url: 'attention/attention'
+			url: '/pages/healthy/map/map'
 		})
 	},
-	release() {
-		wx.navigateTo({
-			url: 'release/release'
-		})
-	},
-	buy(){
-		wx.navigateTo({
-			url:"/pages/publish/buy/buy"
-		})
+	nurse() {
+		if(getApp().globalData.phone == ""){
+			console.log(getApp().globalData.phone),
+
+			wx.showModal({
+				title: '提示',
+				content: '您还未登录',
+				success: function(res) {
+				 if (res.confirm) {
+					console.log('用户点击确定')
+				 }
+				}
+			 })
+		}else{
+			wx.navigateTo({
+				url: '/pages/home/nurse/nurse.js'
+			})
+		}
 	},
 	getuserinfo() {
 		wx.getSetting({
@@ -111,11 +158,6 @@ Page({
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	calculate() {
-		wx.navigateTo({
-			url: "calculate/calculate"
-		})
-	},
 	AboutUs() {
 		wx.navigateTo({
 			url: 'AboutUs/AboutUs'

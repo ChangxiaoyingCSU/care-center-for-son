@@ -49,7 +49,7 @@
       },
       {
         "pagePath": "pages/healthy/healthy",
-        "text": "发布",
+        "text": "展示",
         "iconPath": "/assets/tabbar/mine_new.png",
         "selectedIconPath": "/assets/tabbar/mine_new_.png",
         "selectedColor": "#3fbaa6"
