@@ -20,7 +20,8 @@
     "components/icon/icon",
     "pages/my/nurContent/nurContent",
     "pages/pay/pay",
-    "pages/home/nurse/nurse"
+    "pages/home/nurse/nurse",
+    "pages/information/tianqi/tianqi"
   ],
   "permission": {
     "scope.userLocation": {
@@ -41,7 +42,7 @@
         "selectedColor": "#3fbaa6"
       },
       {
-        "pagePath": "pages/information/information",
+        "pagePath": "pages/information/tianqi/tianqi",
         "text": "资讯",
         "iconPath": "/assets/tabbar/about.png",
         "selectedIconPath": "/assets/tabbar/about_cur.png",

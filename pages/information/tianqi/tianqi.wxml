@@ -1,0 +1,102 @@
+<h-swiper swiperImg="{{swiperImg}}" />
+
+<view class="swiper-input">
+  <view style="border-radius:10px; background:#fff;display:block; width:100%">
+    <view class="tianqi">
+      <image mode="widthFix" src="/img/icon1.png" style="width:50rpx;height:30rpx;vertical-align: middle; " />
+      {{weatherweek.city}}
+    </view>
+    <view style="padding:15px 0;" class="tianqi">
+      <view style="font-size:38px;">{{weatherweek.data[0].tem}}℃</view>
+    </view>
+    <view style="padding:20px 0;" class="tianqi">{{weatherweek.data[0].wea}}</view>
+  </view>
+</view>
+<view class='container'>
+
+  <view style="margin-top:10px; padding:10px 0; border-radius:10px; background:#f6f5ec;display:block; width:100%;">
+    <block wx:for="{{weatherweek.data}}">
+      <view class="weui-flex" style="padding-bottom:10px;">
+        <view class="weui-flex__item">{{item.week}}</view>
+        <view class="weui-flex__item">{{item.wea}}</view>
+        <view class="weui-flex__item">{{item.tem2}} - {{item.tem1}}℃</view>
+      </view>
+    </block>
+  </view>
+
+  <view style="margin-top:10px; border-radius:10px; background:#fff;display:block; width:100%;">
+    <view style="font-size:16px; padding:10px 0;font-weight:bold; background-color:#84bf96">
+    <text style="color:#fff;font-size:16px">健康指数</text></view>
+    <view class="weui-grids" style="background-color:#cde6c7">
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon8.png" />
+        <view class="weui-grid__label">紫外线指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[0].level}}</view>
+      </view>
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon2.png" />
+        <view class="weui-grid__label">减肥指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[1].level}}</view>
+      </view>
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon6.png" />
+        <view class="weui-grid__label">血糖指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[2].level}}</view>
+      </view>
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon7.png" />
+        <view class="weui-grid__label">穿衣指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[3].level}}</view>
+      </view>
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon4.png" />
+        <view class="weui-grid__label">洗车指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[4].level}}</view>
+      </view>
+      <view class="weui-grid">
+        <image class="weui-grid__icon" src="/img/icon3.png" />
+        <view class="weui-grid__label">空气指数</view>
+        <view class="weui-grid__label">{{weatherweek.data[0].index[5].level}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class="bg">
+  <view class="notice">通知：关于进一步健全梅岭社区颐养中心系统的通知</view>
+</view>
+<!-- <view>
+  <block wx:for="{{excellentHouse}}" wx:key="index">
+    <view>
+      <view class="s1">健康生活的三个基本方法</view>
+    </view>
+    <view class="item-lsti-conent {{index==2? 'sw1':''}}">
+      <view class="data02-tupian">
+        <image class="data02-img" src="{{item.img}}" alt="" />
+      </view>
+
+      <view class="data02-title">
+        
+
+        <view class="s3">
+          <text style="color:red;font-size:30rpx;font-weight:800;">{{item.number}}</text>
+          <text style="color:red;">K</text>
+          <div class="vLine"></div>
+          <span>{{item.specifications}}</span>
+          <div class="vLine"></div>
+          <span>好评率：</span>
+          <span style="color:#384047">{{item.squaremeter}}%</span>
+        </view>
+
+        <view class="s4">
+          <view class="x2"><text>健康生活</text></view>
+          <view class="x1"><text>养身</text></view>
+          <view class="x1"><text>老年</text></view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view> -->
+<image src="/assets/heal.png" style="width:100%; height: 340rpx" />
+<image src="/assets/heal1.png" style="width:100%; height: 360rpx" />

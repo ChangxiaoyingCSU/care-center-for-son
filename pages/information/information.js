@@ -7,12 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    weather: { 
-      'wea_img': 'qing'
-  },//实况天气
-    weatherweek:[
-
-    ],//七日天气
+    weather: { 'wea_img': 'qing'},//实况天气
+    weatherweek:[],//七日天气
     swiperImg:[
       {
         img:"/static/banner/g1.jpg"
@@ -197,7 +193,6 @@ Page({
         _this.setData({
           weatherweek: res.data
         });
-        console.log(weatherweek.data[0].index[1].level)
         console.log(_this.data.weatherweek)
       }
     });
