@@ -166,34 +166,35 @@ Page({
         url: '/pages/healthy/map/map'
       })
     } else if (num == 1){
-      // if(getApp().globalData.phone == ""){
-      //   console.log(getApp().globalData.phone),
+      if(getApp().globalData.phone == ""){
+        console.log(getApp().globalData.phone),
   
-      //   wx.showModal({
-      //     title: '提示',
-      //     content: '您还未登录',
-      //     success: function(res) {
-      //      if (res.confirm) {
-      //       console.log('用户点击确定')
-      //      }
-      //     }
-      //    })
+        wx.showModal({
+          title: '提示',
+          content: '您还未登录',
+          success: function(res) {
+           if (res.confirm) {
+            console.log('用户点击确定')
+           }
+          }
+         })
   
-      // }else{
+      }else{
         wx.request({
           url: 'http://localhost:8088/healthyForSun/getHealthyList',
           data:{
-            custname:"张三",
-            phone:"12345612312"
-            // custname:getApp().globalData.custName,
-            // phone:getApp().globalData.custPhone,
+            // custname:"张三",
+            // phone:"12345612312"
+            custname:getApp().globalData.custName,
+            phone:getApp().globalData.custPhone,
           },
           method:'GET',
           header: {
             'content-type': 'application/json' // 默认值
           },
           success:function(res){
-            wx.setStorageSync('healthyList', that.data.healthyList);
+            wx.setStorageSync('healthyList', res.data);
+            console.log(res.data)
     
           },
           fail:function(res){
@@ -201,12 +202,10 @@ Page({
           }
         });
 
-        var healthyList = wx.getStorageSync('healthyList');
         wx.navigateTo({
-          url: '/pages/healthy/healthy/healthy?healthyList='+healthyList
+          url: '/pages/healthy/healthy/healthy'
         })
-
-      // }
+      }
      
     }else if (num == 2){
       
@@ -223,67 +222,86 @@ Page({
          })
   
       }else{
-        wx.navigateTo({
-          url: '/pages/timeline/index'
-        })
-      }
-
-    }else if (num == 3){
-      // if(getApp().globalData.phone == ""){
-  
-      //   wx.showModal({
-      //     title: '提示',
-      //     content: '您还未登录',
-      //     success: function(res) {
-      //      if (res.confirm) {
-      //       console.log('用户点击确定')
-      //      }
-      //     }
-      //    })
-  
-      // }else{
-        
         var that = this;
         wx.request({
-          url: 'http://localhost:8088/nurseContent/getNurseContent',
+          url: 'http://localhost:8088/dietForCustomer/getOrderDietById',
+          async : false,
           data:{
-            custname:"张三",
-            phone:"12345612312"
-            // custname:getApp().globalData.custName,
-            // phone:getApp().globalData.custPhone
+            custname: getApp().globalData.custName,
+            phone:getApp().globalData.custPhone
           },
           method:'GET',
           header: {
             'content-type': 'application/json' // 默认值
           },
           success:function(res){
+            var dietList = res.data;
+            var planList = new Array(1);
+            var breakList = new Array(1); 
+            var lunchList = new Array(1); 
+            var dinnerList = new Array(1); 
+            for(var i = 0; i < dietList.length; i++){
+              planList[i] = dietList[i].day;
+              breakList[i] = dietList[i].breakfastId;
+              lunchList[i] = dietList[i].lunchId;
+              dinnerList[i] = dietList[i].dinnerId;
+            }
+            wx.setStorageSync('planList', planList);
+            wx.setStorageSync('breakList', breakList);
+            wx.setStorageSync('lunchList', lunchList);
+            wx.setStorageSync('dinnerList', dinnerList);
+          },
+          fail:function(res){
+            console.log(".....fail.....");
+          }
+        });
+        wx.navigateTo({
+          url: '/pages/timeline/index'
+        })
+      }
 
-            console.log(res.data)
+    }else if (num == 3){
+      if(getApp().globalData.phone == ""){
+  
+        wx.showModal({
+          title: '提示',
+          content: '您还未登录',
+          success: function(res) {
+           if (res.confirm) {
+            console.log('用户点击确定')
+           }
+          }
+         })
+  
+      }else{
+        
+        var that = this;
+        wx.request({
+          url: 'http://localhost:8088/nurseContent/getNurseContent',
+          data:{
+            // custname:"张三",
+            // phone:"12345612312"
+            custname:getApp().globalData.custName,
+            phone:getApp().globalData.custPhone
+          },
+          method:'GET',
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success:function(res){
             
-            // wx.setStorageSync('nurContent', res.data)
-            that.setData({
-              nurContent:res.data
-            })
-
-            console.log(that.data.nurContent)
-            wx.navigateTo({
-              url: '/pages/home/nurse/nurse?nurContent='+res.data
-            })
+            wx.setStorageSync('nurContent', res.data);
           },
           fail:(res)=>{
             console.log(".....fail.....");
           }
         });
 
-        // var nurContent = wx.getStorageSync('nurContent');
-        // this.setData({
-        //   nurContent:nurContent
-        // })
-        // wx.navigateTo({
-        //   url: '/pages/home/nurse/nurse?nurContent='+JSON.parse(this.data.nurContent)
-        // })
+        wx.navigateTo({
+          url: '/pages/home/nurse/nurse?nurContent'
+        });
        
-      // }
+      }
     }else if (num == 4){
       wx.navigateTo({
         url: '/pages/home/newHouseList/newHouseList?id='+num

@@ -25,13 +25,32 @@ Page({
        })
 
     }else{
+      wx.request({
+        url: 'http://localhost:8088/healthyForSun/getHealthyList',
+        data:{
+          // custname:"张三",
+          // phone:"12345612312"
+          custname:getApp().globalData.custName,
+          phone:getApp().globalData.custPhone,
+        },
+        method:'GET',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success:function(res){
+          wx.setStorageSync('healthyList', res.data);
+          console.log(res.data)
+  
+        },
+        fail:function(res){
+          console.log(".....fail.....");
+        }
+      });
+
       wx.navigateTo({
-        
-        url: '/pages/healthy/healthy/healthy',
+        url: '/pages/healthy/healthy/healthy'
       })
     }
-
-	
   },
   healthy2(){
     if(getApp().globalData.phone == ""){
@@ -48,6 +67,26 @@ Page({
        })
 
     }else{
+      wx.request({
+        url: 'http://localhost:8088/healthyForSun/getHealthyVO',
+        data:{
+          // custname:"张三",
+          // phone:"12345612312"
+          custname:getApp().globalData.custName,
+          phone:getApp().globalData.custPhone
+        },
+        method:'GET',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success:function(res){
+           wx.setStorageSync('customer', res.data);
+          console.log(res.data);
+        },
+        fail:function(res){
+          console.log(".....fail.....");
+        }
+      });
       wx.navigateTo({
         url: '/pages/healthy/card/add',
       })
@@ -55,8 +94,7 @@ Page({
   },
 	diet(){
     if(getApp().globalData.phone == ""){
-      console.log(getApp().globalData.phone),
-
+  
       wx.showModal({
         title: '提示',
         content: '您还未登录',
@@ -68,8 +106,41 @@ Page({
        })
 
     }else{
+      var that = this;
+      wx.request({
+        url: 'http://localhost:8088/dietForCustomer/getOrderDietById',
+        async : false,
+        data:{
+          custname: getApp().globalData.custName,
+          phone:getApp().globalData.custPhone
+        },
+        method:'GET',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success:function(res){
+          var dietList = res.data;
+          var planList = new Array(1);
+          var breakList = new Array(1); 
+          var lunchList = new Array(1); 
+          var dinnerList = new Array(1); 
+          for(var i = 0; i < dietList.length; i++){
+            planList[i] = dietList[i].day;
+            breakList[i] = dietList[i].breakfastId;
+            lunchList[i] = dietList[i].lunchId;
+            dinnerList[i] = dietList[i].dinnerId;
+          }
+          wx.setStorageSync('planList', planList);
+          wx.setStorageSync('breakList', breakList);
+          wx.setStorageSync('lunchList', lunchList);
+          wx.setStorageSync('dinnerList', dinnerList);
+        },
+        fail:function(res){
+          console.log(".....fail.....");
+        }
+      });
       wx.navigateTo({
-        url: '/pages/timeline/index',
+        url: '/pages/timeline/index'
       })
     }
 

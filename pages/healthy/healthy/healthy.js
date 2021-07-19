@@ -352,7 +352,7 @@ function initChartPress(canvas, width, height, dpr) {
   // pressure[4] = healthyList[4].pressure.split("/");
   // pressure[5] = healthyList[5].pressure.split("/");
   // pressure[6] = healthyList[6].pressure.split("/");
-  console.log(pressure);
+  // console.log(pressure);
   // var systolicPressure = healthyList.
 
   var option = {

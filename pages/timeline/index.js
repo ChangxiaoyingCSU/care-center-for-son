@@ -9,52 +9,9 @@ Page({
     planArr: [] ,
   },
   onLoad() {
-    var that = this;
-    wx.request({
-      url: 'http://localhost:8088/dietForCustomer/getOrderDietById',
-      async : false,
-      data:{
-        custname: getApp().globalData.custName,
-        phone:getApp().globalData.custPhone
-      },
-      method:'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success:(res)=>{
-        var dietList = res.data;
-        // console.log(dietList);
-        var dayList = new Array(1);
-        var breakList = new Array(1); 
-        var lunchList = new Array(1); 
-        var dinnerList = new Array(1); 
-        for(var i = 0; i < dietList.length; i++){
-          dayList[i] = dietList[i].day;
-          breakList[i] = dietList[i].breakfastId;
-          lunchList[i] = dietList[i].lunchId;
-          dinnerList[i] = dietList[i].dinnerId;
-        }
-        
-        let planList = this.data.planList;
-        planList = dayList;
-        
-        that.setData({
-          planList:planList,
-        });
-        wx.setStorageSync('planList', planList);
-        wx.setStorageSync('breakList', breakList);
-        wx.setStorageSync('lunchList', lunchList);
-        wx.setStorageSync('dinnerList', dinnerList);
-        // console.log(this.data.planList);
-      },
-      fail:function(res){
-        console.log(".....fail.....");
-      }
-    });
-
     let planList = wx.getStorageSync('planList');
     console.log(planList);
-    let dataInfo = that.getStrWeek();
+    let dataInfo = this.getStrWeek();
     let planArr = this.getDiet();
     // let planList = this.getDay();
     // console.log(diet);

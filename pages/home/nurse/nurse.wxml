@@ -69,7 +69,7 @@
 					<text>{{nurContent.endTime}}</text>
 				</view>
         <view class="itemq" style="{{curentChoose==true?'':'display: none;'}}">
-					<button class="btn">续费</button>
+					<button bindtap="btn" class="btn">续费</button>
 				</view>
 			</view>
 		</view>

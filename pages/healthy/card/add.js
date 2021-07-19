@@ -246,27 +246,6 @@ Page({
    
       });
 
-      wx.request({
-         url: 'http://localhost:8088/healthyForSun/getHealthyVO',
-         data:{
-           custname:"张三",
-           phone:"12345612312"
-          //  custname:getApp().globalData.custName,
-          //  phone:getApp().globalData.custPhone
-         },
-         method:'GET',
-         header: {
-           'content-type': 'application/json' // 默认值
-         },
-         success:function(res){
-            that.data.customer = res.data;
-            wx.setStorageSync('customer', that.data.customer);
-   
-         },
-         fail:function(res){
-           console.log(".....fail.....");
-         }
-       });
    },
 
    /**

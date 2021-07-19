@@ -3,7 +3,8 @@ import * as echarts from '../../../ec-canvas/echarts';
 const app = getApp();
 
 function initChart(canvas, width, height, dpr) {
-	var nurContent = this.data.nurContent;
+	var nurContent = wx.getStorageSync('nurContent');
+	console.log(nurContent);
 	const chart = echarts.init(canvas, null, {
 		width: width,
 		height: height,
@@ -100,7 +101,7 @@ Page({
 		})
 	},
 	
-	itemq:function(){
+	btn:function(){
 		wx.navigateTo({
 			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?id='+this.data.nurContent.nurseId+'&price='+this.data.nurContent.price
 		})
@@ -110,8 +111,9 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		var nurContent = wx.getStorageSync('nurContent');
 		this.setData({
-			nurContent:JSON.parse(options)
+			nurContent:nurContent
 		})
 	},
 
