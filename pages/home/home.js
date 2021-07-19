@@ -4,6 +4,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // nurContent:{
+    //   "nurseId": "10002",
+    //   "name": "夏华",
+    //   "sex": "女",
+    //   "age": 25,
+    //   "price": 4000,
+    //   "description": "做事认真负责，不马虎",
+    //   "levelId": 1,
+    //   "levelName": "超级",
+    //   "startTime": "2021-7-16",
+    //   "endTime": "2021-8-10",
+    //   "allDays": 25,
+    //   "lastDays": 21
+    // },
+    nurContent:null,
 		img:[
 			"/assets/banner.png",
 			"/assets/main.png",
@@ -43,90 +58,6 @@ Page({
         {
           img:'/assets/doctor.png',
           title:'护工信息'
-        }
-      ],
-      /**测试数据  已废 */
-      Directsale:[
-        {
-          img:'/assets/swiper/1505369912_OSsyYi.jpg',
-          title:'地铁电梯,套二,中庭好房有车库'
-        },
-        {
-          img:'/assets/swiper/1505369912_OSsyYi.jpg',
-          title:'地铁电梯,套二,中庭好房有车库'
-        }
-      ],
-      /**房东直租数据接口 */
-      homeListItemFd:[ 
-        {
-          id:'1',
-          zd: '0',
-          img:'../../assets/doctor/1.jpg',
-          title:'海港广场，精装标准套三出售，带家具家电靠地铁',
-          stmel:'芙蓉区',
-          stmels:'长房东立',
-          number:'700000',
-          specifications:'2室1厅',
-          squaremeter:'67.7',
-          homesuper:'精装修',
-          avatar:'../../assets/home/Headportrait/s01.png',
-          type:'个人'
-        },
-        {
-          id:'2',
-          zd: '0',
-          img:'../../assets/doctor/2.jpg',
-          title:'中心广场中心.领包入住，精装修房东直租',
-          stmel:'开福区',
-          stmels:'宽属大厦',
-          number:'900000',
-          specifications:'3室1厅',
-          squaremeter:'77.7',
-          homesuper:'精装修',
-          avatar:'../../assets/home/Headportrait/s02.png',
-          type:'个人'
-        },
-        {
-          id:'3',
-          zd: '0',
-          img:'../../assets/doctor/3.jpg',
-          title:'南儿街顶楼地段好地铁房双林小学 带花园',
-          stmel:'梅溪湖',
-          stmels:'鼎奥国际',
-          number:'1450000',
-          specifications:'2室',
-          squaremeter:'127.7',
-          homesuper:'精装修',
-          avatar:'../../assets/home/Headportrait/s03.png',
-          type:'个人'
-        },
-        {
-          id:'4',
-          zd:'0',
-          img:'../../assets/doctor/4.jpg',
-          title:'溪岛精装套三，靠地铁',
-          stmel:'长沙县',
-          stmels:'小遂溪岛',
-          number:'900000',
-          specifications:'3室1厅',
-          homesuper:'精装修',
-          squaremeter:'57.7',
-          avatar:'../../assets/home/Headportrait/s04.png',
-          type:'个人'
-        },
-        {
-          id: '5',
-          zd:'1',
-          img: '../../assets/doctor/1.jpg',
-          title: 'sssssssss三，靠',
-          stmel: '长沙县',
-          stmels: '小遂溪岛',
-          number: '900000',
-          specifications: '3室1厅',
-          homesuper: '精装修',
-          squaremeter: '57.7',
-          avatar: '../../assets/home/Headportrait/s04.png',
-          type: '个人'
         }
       ],
     homeListItemYx: [
@@ -235,30 +166,51 @@ Page({
         url: '/pages/healthy/map/map'
       })
     } else if (num == 1){
-      if(getApp().globalData.phone == ""){
-        console.log(getApp().globalData.phone),
+      // if(getApp().globalData.phone == ""){
+      //   console.log(getApp().globalData.phone),
   
-        wx.showModal({
-          title: '提示',
-          content: '您还未登录',
-          success: function(res) {
-           if (res.confirm) {
-            console.log('用户点击确定')
-           }
+      //   wx.showModal({
+      //     title: '提示',
+      //     content: '您还未登录',
+      //     success: function(res) {
+      //      if (res.confirm) {
+      //       console.log('用户点击确定')
+      //      }
+      //     }
+      //    })
+  
+      // }else{
+        wx.request({
+          url: 'http://localhost:8088/healthyForSun/getHealthyList',
+          data:{
+            custname:"张三",
+            phone:"12345612312"
+            // custname:getApp().globalData.custName,
+            // phone:getApp().globalData.custPhone,
+          },
+          method:'GET',
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success:function(res){
+            wx.setStorageSync('healthyList', that.data.healthyList);
+    
+          },
+          fail:function(res){
+            console.log(".....fail.....");
           }
-         })
-  
-      }else{
-          wx.navigateTo({
-            url: '/pages/healthy/healthy/healthy'
-          })
+        });
 
-      }
+        var healthyList = wx.getStorageSync('healthyList');
+        wx.navigateTo({
+          url: '/pages/healthy/healthy/healthy?healthyList='+healthyList
+        })
+
+      // }
      
     }else if (num == 2){
       
       if(getApp().globalData.phone == ""){
-        console.log(getApp().globalData.phone),
   
         wx.showModal({
           title: '提示',
@@ -277,24 +229,61 @@ Page({
       }
 
     }else if (num == 3){
-      if(getApp().globalData.phone == ""){
-        console.log(getApp().globalData.phone),
+      // if(getApp().globalData.phone == ""){
   
-        wx.showModal({
-          title: '提示',
-          content: '您还未登录',
-          success: function(res) {
-           if (res.confirm) {
-            console.log('用户点击确定')
-           }
+      //   wx.showModal({
+      //     title: '提示',
+      //     content: '您还未登录',
+      //     success: function(res) {
+      //      if (res.confirm) {
+      //       console.log('用户点击确定')
+      //      }
+      //     }
+      //    })
+  
+      // }else{
+        
+        var that = this;
+        wx.request({
+          url: 'http://localhost:8088/nurseContent/getNurseContent',
+          data:{
+            custname:"张三",
+            phone:"12345612312"
+            // custname:getApp().globalData.custName,
+            // phone:getApp().globalData.custPhone
+          },
+          method:'GET',
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success:function(res){
+
+            console.log(res.data)
+            
+            // wx.setStorageSync('nurContent', res.data)
+            that.setData({
+              nurContent:res.data
+            })
+
+            console.log(that.data.nurContent)
+            wx.navigateTo({
+              url: '/pages/home/nurse/nurse?nurContent='+res.data
+            })
+          },
+          fail:(res)=>{
+            console.log(".....fail.....");
           }
-         })
-  
-      }else{
-        wx.navigateTo({
-          url: '/pages/home/nurse/nurse'
-        })
-      }
+        });
+
+        // var nurContent = wx.getStorageSync('nurContent');
+        // this.setData({
+        //   nurContent:nurContent
+        // })
+        // wx.navigateTo({
+        //   url: '/pages/home/nurse/nurse?nurContent='+JSON.parse(this.data.nurContent)
+        // })
+       
+      // }
     }else if (num == 4){
       wx.navigateTo({
         url: '/pages/home/newHouseList/newHouseList?id='+num

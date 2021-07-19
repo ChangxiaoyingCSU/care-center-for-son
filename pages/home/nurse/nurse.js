@@ -3,7 +3,7 @@ import * as echarts from '../../../ec-canvas/echarts';
 const app = getApp();
 
 function initChart(canvas, width, height, dpr) {
-	var nurContent = wx.getStorageSync('nurContent');
+	var nurContent = this.data.nurContent;
 	const chart = echarts.init(canvas, null, {
 		width: width,
 		height: height,
@@ -40,7 +40,20 @@ function initChart(canvas, width, height, dpr) {
 Page({
 	data: {
 		curentChoose:true,
-		nurContent:null,
+		nurContent:{
+      "nurseId": "10002",
+      "name": "夏华",
+      "sex": "女",
+      "age": 25,
+      "price": 4000,
+      "description": "做事认真负责，不马虎",
+      "levelId": 1,
+      "levelName": "超级",
+      "startTime": "2021-7-16",
+      "endTime": "2021-8-10",
+      "allDays": 25,
+      "lastDays": 21
+    },
 		ec: {
 			onInit: initChart
     },
@@ -80,45 +93,32 @@ Page({
       }
     ],
 	},
+	
 	choose() {
 		this.setData({
 			curentChoose: !this.data.curentChoose
 		})
-  },
+	},
+	
+	itemq:function(){
+		wx.navigateTo({
+			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?id='+this.data.nurContent.nurseId+'&price='+this.data.nurContent.price
+		})
+	},
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-		wx.request({
-      url: 'http://localhost:8088/nurseContent/getNurseContent',
-      data:{
-        custname:getApp().globalData.custName,
-        phone:getApp().globalData.custPhone
-      },
-      method:'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success:function(res){
-				wx.setStorageSync('nurContent', res.data);
-      },
-      fail:(res)=>{
-        console.log(".....fail.....");
-      }
-		});
-		
-		var nurContent = wx.getStorageSync('nurContent');
 		this.setData({
-			nurContent:nurContent
+			nurContent:JSON.parse(options)
 		})
-		console.log(nurContent);
 	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
 	onReady: function() {
-
 	},
 
 	/**
@@ -127,7 +127,6 @@ Page({
 	onShow: function() {
 
 	},
-
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */

@@ -1070,27 +1070,11 @@ Page({
  
     });
 
-    wx.request({
-      url: 'http://localhost:8088/healthyForSun/getHealthyList',
-      data:{
-        custname:getApp().globalData.custName,
-        phone:getApp().globalData.custPhone,
-      },
-      method:'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success:function(res){
-        console.log("test"+res);
-        var healthy = res.data;
-        that.data.healthyList = healthy;
-        wx.setStorageSync('healthyList', that.data.healthyList);
+    this.setData({
+      healthyList:options
+    })
 
-      },
-      fail:function(res){
-        console.log(".....fail.....");
-      }
-    });
+    console.log(this.data.healthyList);
   }
 })
 

@@ -290,14 +290,11 @@ Page({
 		})
 	},
 	onLoad: function(options) {
-		console.log(options);
 		var that = this;
 		that.setData({nurContent:JSON.parse(options.nurContent)});
 		// this.data.nurContent = JSON.parse(options.nurContent);
-		console.log(this.data.nurContent.nurseId);
 	},
 	serve() {
-		console.log(this.data.nurContent);
 		wx.navigateTo({
 			// nurContent='+JSON.stringify(this.data.nurContent)+'
 			url: '/components/homeGod/homeGodDetail/homeGodDetail/homeGodDetailOther/homeGodDetailOther?id='+this.data.nurContent.nurseId+'&price='+this.data.nurContent.price
