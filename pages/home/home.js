@@ -4,20 +4,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // nurContent:{
-    //   "nurseId": "10002",
-    //   "name": "夏华",
-    //   "sex": "女",
-    //   "age": 25,
-    //   "price": 4000,
-    //   "description": "做事认真负责，不马虎",
-    //   "levelId": 1,
-    //   "levelName": "超级",
-    //   "startTime": "2021-7-16",
-    //   "endTime": "2021-8-10",
-    //   "allDays": 25,
-    //   "lastDays": 21
-    // },
     nurContent:null,
 		img:[
 			"/assets/banner.png",
