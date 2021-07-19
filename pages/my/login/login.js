@@ -53,14 +53,25 @@ Page({
         //     //  url:'create_photo'
         //     })
         //   }
-            console.log(res.data);
-            getApp().globalData.custName = res.data.name;
-            getApp().globalData.custPhone = res.data.phone;
-            getApp().globalData.phone = res.data.wechat;
-            wx.switchTab({
-               
-                url: '../my'
-            })
+
+            if(res.data.name== null){
+              wx.showToast({
+                title: '用户错误',
+                icon: 'none',
+                duration: 2000
+              })
+            } else{
+
+              console.log(res.data);
+              getApp().globalData.custName = res.data.name;
+              getApp().globalData.custPhone = res.data.phone;
+              getApp().globalData.phone = res.data.wechat;
+              wx.switchTab({
+                 
+                  url: '../my'
+              })
+            }
+
         },
         fail: function(res) {
             console.log("fail...")
