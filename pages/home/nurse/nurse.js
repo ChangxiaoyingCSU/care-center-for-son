@@ -92,10 +92,8 @@ Page({
 		wx.request({
       url: 'http://localhost:8088/nurseContent/getNurseContent',
       data:{
-				custname:"张三",
-				phone:"12345612312"
-        // custname:getApp().globalData.custName,
-        // phone:getApp().globalData.custPhone,
+        custname:getApp().globalData.custName,
+        phone:getApp().globalData.custPhone
       },
       method:'GET',
       header: {
