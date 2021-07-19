@@ -1,10 +1,18 @@
 // pages/information/information.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    weather: { 
+      'wea_img': 'qing'
+  },//实况天气
+    weatherweek:[
+
+    ],//七日天气
     swiperImg:[
       {
         img:"/static/banner/g1.jpg"
@@ -25,8 +33,7 @@ Page({
         img:"/static/banner/g6.jpg"
       },
     ],
-    weather: { 'wea_img': 'qing'},//实况天气
-    weatherweek:[],//七日天气
+    
     excellentHouse: [{
       id: '1',
       zd: '1',
@@ -160,7 +167,7 @@ Page({
     var _this = this;
     // 获取IP地址, 请更换为自己的appid和appsecret
     wx.request({
-      url: 'https://www.tianqiapi.com/ip?appid=&appsecret=',
+      url: 'https://www.tianqiapi.com/api/?appid=65386114&appsecret=1UNuTzyh',
       data: {
       },
       method: 'POST',
@@ -178,7 +185,7 @@ Page({
   weatherweekday: function (ip) {
     var _this = this;
     wx.request({
-      url: 'https://www.tianqiapi.com/api/?version=v9&appid=&appsecret=',
+      url: 'https://www.tianqiapi.com/api/?version=v9&appid=65386114&appsecret=1UNuTzyh',
       data: {
         'ip': ip
       },
@@ -190,6 +197,7 @@ Page({
         _this.setData({
           weatherweek: res.data
         });
+        console.log(weatherweek.data[0].index[1].level)
         console.log(_this.data.weatherweek)
       }
     });
